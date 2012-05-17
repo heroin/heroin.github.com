@@ -7,14 +7,14 @@ tagline:
 
 <div class="row">
   <div class="span8">
-  {% for post in site.posts limit:10 %}
+  {% for post in paginator.posts %}
   {% assign content = post.content %}
     <article>
       <header>
       <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
       <div class="date">{{ site.author.name }} 发表于 <span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
     </header>
-    <div class="content">{{ content }}</div>
+    <div class="content">{{ content | truncatewords:40 }}</div>
     </article>
   {% endfor %}
   <div class="pagination">
@@ -53,4 +53,3 @@ tagline:
     
   </aside>
 </div>
-
