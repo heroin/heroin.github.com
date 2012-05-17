@@ -7,7 +7,8 @@ tagline:
 
 <div class="row">
   <div class="span8">
-  {% for post in paginator.posts %}
+    <!-- {{ BASE_PATH }} -->
+  {% for post in site.posts limit:10 %}
   {% assign content = post.content %}
     <article>
       <header>
