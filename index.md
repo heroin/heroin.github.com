@@ -1,16 +1,7 @@
 ---
 layout: page
 title: Heroin blog's
-tagline: Supporting tagline
----
-{% include JB/setup %}
-
----
-layout: page
-title: justjavac的博客
-keywords: justjavac, web开发
-description: justjavac的个人博客， 探讨目前最时髦的web开发技术。
-tagline: 专注最时髦的web开发技术
+tagline: 
 ---
 {% include JB/setup %}
 
