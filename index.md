@@ -7,7 +7,6 @@ tagline:
 
 <div class="row">
   <div class="span8">
-    <!-- {{ BASE_PATH }} -->
   {% for post in site.posts limit:10 %}
   {% assign content = post.content %}
     <article>
