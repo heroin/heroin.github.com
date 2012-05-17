@@ -1,9 +1,23 @@
 ---
 layout: page
-title: Heroin blog's
-tagline: 
+title: justjavac的博客
+keywords: justjavac, web开发
+description: justjavac的个人博客， 探讨目前最时髦的web开发技术。
+tagline: 专注最时髦的web开发技术
 ---
 {% include JB/setup %}
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061364613986259";
+/* justjavac 页首横幅 */
+google_ad_slot = "6421375412";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 
 <div class="row">
   <div class="span8">
@@ -53,4 +67,3 @@ tagline:
     
   </aside>
 </div>
-
