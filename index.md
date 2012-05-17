@@ -5,42 +5,61 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+---
+layout: page
+title: justjavac的博客
+keywords: justjavac, web开发
+description: justjavac的个人博客， 探讨目前最时髦的web开发技术。
+tagline: 专注最时髦的web开发技术
+---
+{% include JB/setup %}
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
-
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+<div class="row">
+  <div class="span8">
+  {% for post in paginator.posts %}
+  {% assign content = post.content %}
+    <article>
+      <header>
+      <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
+      <div class="date">{{ site.author.name }} 发表于 <span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
+    </header>
+    <div class="content">{{ content | truncatewords:40 }}</div>
+    </article>
   {% endfor %}
-</ul>
+  <div class="pagination">
+      <ul>
+      {% if paginator.next_page %}
+        <li class="prev"><a href='/page{{ paginator.next_page }}'>&larr; Older</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">归档</a></li>
+      {% if paginator.previous_page %}
+        <li class="next"><a href='/page{{ paginator.previous_page}}'>Newer &rarr;</a></li>
+      {% endif %}
+      </ul>
+  </div>
+  </div>
+  
+  <aside class="span4">
 
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
+    <section>
+    <h4>最近发表</h4>
+    <ul id="recent_posts">
+    {% for rpost in site.posts limit: 6 %}
+      <li class="post">
+        <a href="{{ BASE_PATH }}{{ rpost.url }}">{{ rpost.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+    </section>
+    
+  {% unless site.categories == empty %}
+    <h4>分类</h4>
+    <ul class="tag_box">
+      {% assign categories_list = site.categories %}
+      {% include JB/categories_list %}
+    </ul>
+  {% endunless %}  
+    
+  </aside>
+</div>
 
