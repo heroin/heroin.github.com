@@ -10,13 +10,13 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Heroin blog's
-tagline: Site Tagline
+tagline: Heroin blog's
 author :
   name : Heroin
   email : heroin.nee@gmail.com
   github : heroin
-  twitter : username
-  feedburner : feedname
+  twitter : None
+  feedburner : None
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -81,11 +81,11 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : Heroin
     livefyre :
-      site_id : 123
+      site_id : Heroin
     intensedebate :
-      account : 123abc
+      account : Heroin
     facebook :
       appid : 123
       num_posts: 5
