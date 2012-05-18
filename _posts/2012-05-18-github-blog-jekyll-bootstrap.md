@@ -5,6 +5,6 @@ category: javascript
 tags: [github, bootstrap, jekyll]
 ---
 
-.prettyprint linenums
-    .prettyprint linenums
+~~~~ {.prettyprint .linenums}
     alert(1);
+~~~~
