@@ -29,4 +29,4 @@ brackets 所依赖的js库
     git clone git://github.com/laktek/jQuery-Smart-Auto-Complete.git
 
 
-![](/assets/adobe-brackets-install/dir.jpg)
+![](/assets/blog/adobe-brackets-install/dir.png)
