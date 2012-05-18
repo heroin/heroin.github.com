@@ -33,18 +33,20 @@ tags: [github, bootstrap, jekyll, javascript]
 
 ###添加文章
 在`_posts`目录下新建一个`markdown`(`*.md`)文件,
-文件命名规范是`yyyy-mm-dd-url`, 例如该文章的文件为`2012-05-18-github-blog-jekyll-bootstrap.md`,
+文件命名规范是`yyyy-mm-dd-url`, 例如该文章的文件为`2012-05-18-github-blog-jekyll-bootstrap.md`
+
 得到的访问路径却是
 [/javascript/2012/05/18/github-blog-jekyll-bootstrap/][]
   [/javascript/2012/05/18/github-blog-jekyll-bootstrap/]: /javascript/2012/05/18/github-blog-jekyll-bootstrap/
 其中`/javascript`是在markdown文件中配置的.
 
+
 markdown文件头需要几个配置, 以下是该文章的头配置
-    ---
-    layout: post
-    title: 在github上搭建博客
-    category: javascript
-    tags: [github, bootstrap, jekyll, javascript]
-    ---
+    >---
+    >layout: post
+    >title: 在github上搭建博客
+    >category: javascript
+    >tags: [github, bootstrap, jekyll, javascript]
+    >---
 
 每个markdown必须在头部加上这段. 然后下面直接写markdown代码就行了.
