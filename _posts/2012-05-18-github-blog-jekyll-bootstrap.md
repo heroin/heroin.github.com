@@ -42,11 +42,12 @@ tags: [github, bootstrap, jekyll, javascript]
 
 
 markdown文件头需要几个配置, 以下是该文章的头配置
-    >---
-    >layout: post
-    >title: 在github上搭建博客
-    >category: javascript
-    >tags: [github, bootstrap, jekyll, javascript]
-    >---
+
+    ---
+    layout: post
+    title: 在github上搭建博客
+    category: javascript
+    tags: [github, bootstrap, jekyll, javascript]
+    ---
 
 每个markdown必须在头部加上这段. 然后下面直接写markdown代码就行了.
