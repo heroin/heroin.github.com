@@ -39,3 +39,8 @@ brackets 所依赖的js库
 > 将`JSLint`内全部文件移动到`brackets-app/brackets/src/thirdparty/jslint`  
 移动完后直接运行`brackets-app/win/bin/Brackets.exe`即可打开, 效果图如下:  
 ![](/assets/blog/adobe-brackets-install/show.png)
+
+####精简步骤
+*windows测试没问题, 应该也兼容于mac*  
+在原有安装好的基础下, 将`brackets-app/bin/win`下全部文件, 复制到`brackets-app/brackets/bin`目录下.  
+然后将`brackets-app/brackets`目录单独拷贝出来, 直接打开`brackets/bin/Brackets.exe`即可运行.
