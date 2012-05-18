@@ -11,8 +11,8 @@ paginate: 5
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Heroin blog's
-tagline: Heroin blog's
+title : Heroin blog
+tagline: Heroin blog
 author :
   name : Heroin
   email : heroin.nee@gmail.com
