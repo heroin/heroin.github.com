@@ -5,6 +5,7 @@ category: javascript
 tags: [github, bootstrap, jekyll]
 ---
 
-~~~~ {.prettyprint .linenums}
-    alert(1);
-~~~~
+在github上注册帐号, 如果你的帐号为`heroin`
+创建`heroin.github.com`这个项目.
+
+
