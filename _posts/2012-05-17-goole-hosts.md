@@ -1,7 +1,7 @@
 ---
 layout: post
 title: google hosts
-category: blog
+category: other
 tags: [google, hosts]
 ---
 
