@@ -24,4 +24,8 @@ tags: [github, bootstrap, jekyll]
 
 然后直接访问<http://heroin.github.com>, 就能访问到你搭建的博客了.
 
+###配置jekyll
+
+
+###配置DISQUS
 
