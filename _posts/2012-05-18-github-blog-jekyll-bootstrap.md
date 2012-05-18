@@ -32,4 +32,5 @@ tags: [github, bootstrap, jekyll, javascript]
 
 
 ###添加文章
-在`_posts`目录下新建一个`markdown`(`*.md`)文件
+在`_posts`目录下新建一个`markdown`(`*.md`)文件,
+文件命名规范是`yyyy-mm-dd-url`, 例如该文章的文件为`2012-05-18-github-blog-jekyll-bootstrap.md`
