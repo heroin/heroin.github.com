@@ -9,5 +9,5 @@ Brackets 是 Adobe 的开源 `HTML/CSS/JavaScript` 集成开发环境. Brackets 
 
 要想试用先得clone以下几个项目
 
-<https://github.com/adobe/brackets>  
-<https://github.com/adobe/brackets-app>  
+[brackets](https://github.com/adobe/brackets)  
+[brackets-app](https://github.com/adobe/brackets-app)  

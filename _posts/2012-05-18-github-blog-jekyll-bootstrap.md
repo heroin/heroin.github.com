@@ -12,8 +12,7 @@ tags: [github, bootstrap, jekyll, javascript]
 
 ##安装jekyll
 安装`jekyll`到github上, 这里我用的是
-[Jekyll-Bootstrap][]
-  [Jekyll-Bootstrap]: http://jekyllbootstrap.com/
+[Jekyll-Bootstrap](http://jekyllbootstrap.com/)
 
 执行下列`git`命令
 
