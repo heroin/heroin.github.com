@@ -26,6 +26,6 @@ tags: [github, bootstrap, jekyll]
 
 ###配置jekyll
 
+修改`_config.yml`文件
 
-###配置DISQUS
-
+将一些基础信息配置成想要的内容
