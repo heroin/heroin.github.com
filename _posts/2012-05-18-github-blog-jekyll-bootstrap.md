@@ -16,6 +16,7 @@ tags: [github, bootstrap, jekyll]
   [Jekyll-Bootstrap]: http://jekyllbootstrap.com/
 
 执行下列`git`命令
+
     $ git clone https://github.com/plusjade/jekyll-bootstrap.git heroin.github.com
     $ cd heroin.github.com
     $ git remote set-url origin git@github.com:heroin/heroin.github.com.git
