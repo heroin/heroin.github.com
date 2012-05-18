@@ -35,15 +35,14 @@ jekyllbootstrap默认的首页是`index.md`
 
 但是如果需要分页效果的话需要使用的是`index.html`, 并且修改`_config.yml`, 添加一个配置项`paginate: 5`
 
-详细的配置可以clone我的博客进行看<https://github.com/heroin/heroin.github.com>
+详细的配置可以clone我的博客进行看[https://github.com/heroin/heroin.github.com](https://github.com/heroin/heroin.github.com)
 
 ##添加文章
 在`_posts`目录下新建一个`markdown`(`*.md`)文件,
 文件命名规范是`yyyy-mm-dd-url`, 例如该文章的文件为`2012-05-18-github-blog-jekyll-bootstrap.md`
 
 得到的访问路径却是
-[/javascript/2012/05/18/github-blog-jekyll-bootstrap/][]
-  [/javascript/2012/05/18/github-blog-jekyll-bootstrap/]: /javascript/2012/05/18/github-blog-jekyll-bootstrap/
+[/javascript/2012/05/18/github-blog-jekyll-bootstrap/](/javascript/2012/05/18/github-blog-jekyll-bootstrap/)  
 其中`/javascript`是在markdown文件中配置的.
 
 markdown文件头需要几个配置, 以下是该文章的头配置
