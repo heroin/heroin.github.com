@@ -11,13 +11,8 @@ Brackets 是 Adobe 的开源 `HTML/CSS/JavaScript` 集成开发环境. Brackets 
 
 
 <https://github.com/adobe/brackets>
-
 <https://github.com/adobe/brackets-app>
-
 <https://github.com/douglascrockford/JSLint>
-
 <https://github.com/laktek/jQuery-Smart-Auto-Complete>
-
 <https://github.com/jblas/path-utils>
-
 <https://github.com/adobe/CodeMirror2>
