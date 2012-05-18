@@ -29,3 +29,7 @@ tags: [github, bootstrap, jekyll, javascript]
 修改`_config.yml`文件
 
 将一些基础信息配置成想要的内容
+
+
+###添加文章
+在`_posts`目录下新建一个`markdown`(`*.md`)文件
