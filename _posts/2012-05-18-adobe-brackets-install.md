@@ -7,7 +7,7 @@ tags: [adobe, brackets, ide, javascript, html, css]
 
 Brackets 是 Adobe 的开源 `HTML/CSS/JavaScript` 集成开发环境. Brackets 提供 Windows 和 OS X 平台支持.
 
-要想试用先得`clone`以下几个项目
+要想试用先`clone`以下几个项目
 
 [https://github.com/adobe/brackets](https://github.com/adobe/brackets)  
 brackets 执行文件(`win/mac`)  
