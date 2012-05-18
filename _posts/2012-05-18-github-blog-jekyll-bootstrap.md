@@ -30,6 +30,72 @@ tags: [github, bootstrap, jekyll, javascript]
 
 将一些基础信息配置成想要的内容
 
+####配置首页
+先贴下我的首页配置代码, jekyllbootstrap默认的首页是`index.md`
+
+但是如果需要分页效果的话需要使用的是`index.html`, 并且修改`_config.yml`, 添加一个配置项`paginate: 5`
+
+我是用的`index.html`
+
+    ---
+    layout: page
+    title: Heroin blog
+    tagline: 
+    ---
+    {% include JB/setup %}
+
+    <div class="row">
+      <div class="span8">
+      {% for post in paginator.posts %}
+      {% assign content = post.content %}
+        <article>
+          <header>
+          <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
+          <div class="date">{{ site.author.name }} 发表于 <span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
+        </header>
+        <div class="content">{{ content | truncatewords:40 }}</div>
+        </article>
+      {% endfor %}
+      <div class="pagination">
+          <ul>
+          {% if paginator.next_page %}
+            <li class="prev"><a href='/page{{ paginator.next_page }}'>&larr; Older</a></li>
+          {% endif %}
+            <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">归档</a></li>
+          {% if paginator.previous_page %}
+            <li class="next"><a href='/page{{ paginator.previous_page}}'>Newer &rarr;</a></li>
+          {% endif %}
+          </ul>
+      </div>
+      </div>
+      
+      <aside class="span4">
+
+        <section>
+        <h4>最近发表</h4>
+        <ul id="recent_posts">
+        {% for rpost in site.posts limit: 5 %}
+          <li class="post">
+            <a href="{{ BASE_PATH }}{{ rpost.url }}">{{ rpost.title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+        </section>
+        
+      {% unless site.categories == empty %}
+        <h4>分类</h4>
+        <ul class="tag_box">
+          {% assign categories_list = site.categories %}
+          {% include JB/categories_list %}
+        </ul>
+      {% endunless %}  
+        
+      </aside>
+    </div>
+
+
+
+
 
 ###添加文章
 在`_posts`目录下新建一个`markdown`(`*.md`)文件,
