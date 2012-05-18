@@ -5,12 +5,12 @@ category: javascript
 tags: [github, bootstrap, jekyll, javascript]
 ---
 
-###注册github帐号
+##注册github帐号
 在github上注册帐号, 如果你的帐号为`heroin`
 创建`heroin.github.com`这个项目.
 
 
-###安装jekyll
+##安装jekyll
 安装`jekyll`到github上, 这里我用的是
 [Jekyll-Bootstrap][]
   [Jekyll-Bootstrap]: http://jekyllbootstrap.com/
@@ -25,21 +25,20 @@ tags: [github, bootstrap, jekyll, javascript]
 然后直接访问<http://heroin.github.com>, 就能访问到你搭建的博客了.
 
 
-###配置jekyll
+##配置jekyll
 
 修改`_config.yml`文件
 
 将一些基础信息配置成想要的内容
-
 
 ####配置首页
 jekyllbootstrap默认的首页是`index.md`
 
 但是如果需要分页效果的话需要使用的是`index.html`, 并且修改`_config.yml`, 添加一个配置项`paginate: 5`
 
+详细的配置可以clone我的博客进行看<https://github.com/heroin/heroin.github.com>
 
-
-###添加文章
+##添加文章
 在`_posts`目录下新建一个`markdown`(`*.md`)文件,
 文件命名规范是`yyyy-mm-dd-url`, 例如该文章的文件为`2012-05-18-github-blog-jekyll-bootstrap.md`
 
@@ -47,7 +46,6 @@ jekyllbootstrap默认的首页是`index.md`
 [/javascript/2012/05/18/github-blog-jekyll-bootstrap/][]
   [/javascript/2012/05/18/github-blog-jekyll-bootstrap/]: /javascript/2012/05/18/github-blog-jekyll-bootstrap/
 其中`/javascript`是在markdown文件中配置的.
-
 
 markdown文件头需要几个配置, 以下是该文章的头配置
 
