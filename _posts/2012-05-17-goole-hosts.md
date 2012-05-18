@@ -2,7 +2,7 @@
 layout: post
 title: google hosts
 category: other
-tags: [google, hosts]
+tags: [google, hosts, config]
 ---
 
 
@@ -39,7 +39,6 @@ tags: [google, hosts]
     203.208.46.1    59cbv4l9s05pbaks9v77vc3mengeqors-a-oz-opensocial.googleusercontent.com
     203.208.46.1    i8brh95qor6r54nkl52hidj2ggcs4jgm-a-oz-opensocial.googleusercontent.com
     203.208.46.1    upt14k1i2veesusrda9nfotcrbp9d7p5-a-oz-opensocial.googleusercontent.com
-
 
     203.208.46.1    google.com
     203.208.46.1    google.hk
