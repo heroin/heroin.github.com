@@ -32,8 +32,10 @@ brackets 所依赖的js库
 ![](/assets/blog/adobe-brackets-install/dir.png)
 
 ####安装步骤
-> 将`brackets`内全部文件移动到`brackets-app/brackets`
-> 将`CodeMirror2`内全部文件移动到`brackets-app/brackets/src/thirdparty/CodeMirror2`
-> 将`path-utils`内全部文件移动到`brackets-app/brackets/src/thirdparty/path-utils`
-> 将`jQuery-Smart-Auto-Complete`内全部文件移动到`brackets-app/brackets/src/thirdparty/smart-auto-complete`
-> 将`JSLint`内全部文件移动到`brackets-app/brackets/src/thirdparty/jslint`
+> 将`brackets`内全部文件移动到`brackets-app/brackets`  
+> 将`CodeMirror2`内全部文件移动到`brackets-app/brackets/src/thirdparty/CodeMirror2`  
+> 将`path-utils`内全部文件移动到`brackets-app/brackets/src/thirdparty/path-utils`  
+> 将`jQuery-Smart-Auto-Complete`内全部文件移动到`brackets-app/brackets/src/thirdparty/smart-auto-complete`  
+> 将`JSLint`内全部文件移动到`brackets-app/brackets/src/thirdparty/jslint`  
+移动完后直接运行`brackets-app/win/bin/Brackets.exe`即可打开, 效果图如下:  
+![](/assets/blog/adobe-brackets-install/show.png)
