@@ -2,7 +2,7 @@
 layout: post
 title: 在github上搭建博客
 category: javascript
-tags: [github, bootstrap, jekyll]
+tags: [github, bootstrap, jekyll, javascript]
 ---
 
 ###注册github帐号
