@@ -2,9 +2,8 @@
 layout: post
 title: google hosts
 category: other
-tags: [google, hosts, config]
+tags: [google, hosts, config, other]
 ---
-
 
     203.208.46.1    ssl.gstatic.com
     203.208.46.1    gg.google.com
