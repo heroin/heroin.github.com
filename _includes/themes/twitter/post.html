@@ -1,10 +1,7 @@
 {% if page.title %}
-<!-- if -->
 <div class="page-header">
-  <h1>{{ page.title }} <!-- <small>Supporting tagline</small> --></h1>
+  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small> {% endif %}</h1>
 </div>
-{% else %}
-<!-- else -->
 {% endif %}
 
 <div class="row">
