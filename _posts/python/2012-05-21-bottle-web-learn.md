@@ -18,3 +18,11 @@ tags: [python, bottle]
 安装完后打开python终端测试是否安装成功
 
     >>> import bottle
+    >>> bottle.__version__
+    '0.10.9'
+
+能显示出版本号, 说明安装成功
+
+##使用bottle进行开发
+
+新建一个`.py`文件, 
