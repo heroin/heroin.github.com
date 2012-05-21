@@ -42,7 +42,7 @@
   <section>
     <h4>最近发表</h4>
     <ul id="recent_posts">
-    {% for rpost in site.posts limit: 10 %}
+    {% for rpost in site.posts limit: 5 %}
       <li class="post">
         <a href="{{ BASE_PATH }}{{ rpost.url }}">{{ rpost.title }}</a>
       </li>
