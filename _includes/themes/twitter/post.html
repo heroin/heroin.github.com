@@ -49,14 +49,5 @@
     {% endfor %}
     </ul>
   </section>
-
-  {% unless site.categories == empty %}
-    <h4>分类</h4>
-    <ul class="tag_box">
-      {% assign categories_list = site.categories %}
-      {% include JB/categories_list %}
-    </ul>
-  {% endunless %}
-
   </div>
 </div>
