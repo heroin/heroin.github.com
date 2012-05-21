@@ -6,11 +6,8 @@ tags: [python, bottle]
 ---
 
 ##安装bottle
-
-访问bottle官网, [http://bottlepy.org](http://bottlepy.org/)
-
-github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bottle)
-
+访问bottle官网, [http://bottlepy.org](http://bottlepy.org/)  
+github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bottle)  
 先在github上clone源码到本地进行安装
 
     git clone https://github.com/defnull/bottle.git
@@ -28,3 +25,25 @@ github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bot
 ##使用bottle进行开发
 
 新建一个`.py`文件
+
+    #!/usr/bin/env python
+    # -*- coding: UTF-8 -*-
+
+    from bottle import Bottle, run
+
+    app = Bottle()
+
+    host = "localhost"
+    port = 9090
+    url = "http://" + host + ":%d" % port
+
+    @app.get("/")
+    def get_index():
+        return "get index"
+
+    @app.post("/")
+    def post_index():
+        return "post index"
+
+    run(app, host=host, port=port)
+
