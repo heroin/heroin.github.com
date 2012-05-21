@@ -1,7 +1,7 @@
 /* Override some defaults */
 html, body {
   background-color: #eee;
-  padding-top:60px; padding-bottom:40px;
+  padding-top:20px; padding-bottom:10px;
 }
 .navbar {
   margin-bottom: 0;
