@@ -35,7 +35,7 @@ github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bot
 
     host = "localhost"
     port = 9090
-    url = "http://" + host + ":%d" % port
+    url = "http://%s:%d" % (host, port)
 
     @app.get("/")
     def get_index():
