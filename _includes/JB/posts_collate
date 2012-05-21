@@ -21,9 +21,9 @@ Usage:
   {% include custom/posts_collate %}
 {% else %}
   {% for post in posts_collate  %}
-    {% capture this_year %}{{ post.date | date: "%y" }}{% endcapture %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
-    {% capture next_year %}{{ post.previous.date | date: "%y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%m" }}{% endcapture %}
   
     {% if forloop.first %}
@@ -32,7 +32,7 @@ Usage:
       <ul>
     {% endif %}
   
-    <li><span>{{ post.date | date: "%y/%m/%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date: "%Y/%m/%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   
     {% if forloop.last %}
       </ul>
