@@ -14,7 +14,7 @@ tags: [github, bootstrap, jekyll, javascript]
 安装`jekyll`到github上, 这里我用的是
 [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
 
-执行下列`git`命令
+执行以下命令
 
     $ git clone https://github.com/plusjade/jekyll-bootstrap.git heroin.github.com
     $ cd heroin.github.com
