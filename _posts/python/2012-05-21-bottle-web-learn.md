@@ -10,9 +10,9 @@ tags: [python, bottle]
 github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bottle)  
 先在github上clone源码到本地进行安装
 
-    git clone https://github.com/defnull/bottle.git
-    cd bottle
-    python setup.py install
+    # git clone https://github.com/defnull/bottle.git
+    # cd bottle
+    # python setup.py install
 
 安装完后打开python终端测试是否安装成功
 
@@ -50,8 +50,8 @@ github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bot
 终端执行`demo.py`文件后,
 命令行测试运行效果如下
 
-    curl http://localhost:9090/
+    # curl http://localhost:9090/
     get index
 
-    curl -d "" http://localhost:9090/
+    # curl -d "" http://localhost:9090/
     post index
