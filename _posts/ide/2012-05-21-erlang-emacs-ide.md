@@ -1,7 +1,7 @@
 ---
 layout: post
 title: erlang配置emacs开发
-category: erlang
+category: ide
 tags: [erlang, emacs, ide]
 ---
 
