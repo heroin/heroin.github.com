@@ -63,3 +63,4 @@ tags: [shell, linux, tomcat, script]
         echo "default args is start!"
         tomcat_start
       ;;
+    esac
