@@ -33,10 +33,6 @@ github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bot
 
     app = Bottle()
 
-    host = "localhost"
-    port = 9090
-    url = "http://%s:%d" % (host, port)
-
     @app.get("/")
     def get_index():
         return "get index"
@@ -45,7 +41,7 @@ github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bot
     def post_index():
         return "post index"
 
-    run(app, host=host, port=port)
+    run(app, host="localhost", port=9090)
 
 终端执行`demo.py`文件后,
 命令行测试运行效果如下
