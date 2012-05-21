@@ -9,6 +9,8 @@ tags: [python, bottle]
 
 访问bottle官网, [http://bottlepy.org](http://bottlepy.org/)
 
+github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bottle)
+
 先在github上clone源码到本地进行安装
 
     git clone https://github.com/defnull/bottle.git
