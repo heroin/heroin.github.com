@@ -24,7 +24,7 @@ github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bot
 
 ##使用bottle进行开发
 
-新建一个`.py`文件
+新建一个`demo.py`文件
 
     #!/usr/bin/env python
     # -*- coding: UTF-8 -*-
@@ -47,3 +47,11 @@ github主页: [https://github.com/defnull/bottle](https://github.com/defnull/bot
 
     run(app, host=host, port=port)
 
+终端执行`demo.py`文件后,
+命令行测试运行效果如下
+
+    curl http://localhost:9090/
+    get index
+
+    curl -d "" http://localhost:9090/
+    post index
