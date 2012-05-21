@@ -25,4 +25,4 @@ tags: [python, bottle]
 
 ##使用bottle进行开发
 
-新建一个`.py`文件, 
+新建一个`.py`文件
