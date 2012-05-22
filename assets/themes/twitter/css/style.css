@@ -70,20 +70,36 @@ html, body {
     color:#FFF;
 }
 
+
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 16px;
+    height: 16px;
 }
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+::-webkit-scrollbar-button:end:increment {
+    background-image: url(/assets/themes/images/scroll_cntrl_dwn.png);
+}
+::-webkit-scrollbar-button:start:decrement {
+    background-image: url(/assets/themes/images/scroll_cntrl_up.png);
+}
+::-webkit-scrollbar-track-piece:vertical:start {
+    background-image: url(/assets/themes/images/scroll_gutter_top.png), url(/assets/themes/images/scroll_gutter_mid.png);
+    background-repeat: no-repeat, repeat-y;
+}
+::-webkit-scrollbar-track-piece:vertical:end {
+    background-image: url(/assets/themes/images/scroll_gutter_btm.png), url(/assets/themes/images/scroll_gutter_mid.png);
+    background-repeat: no-repeat, repeat-y;
+    background-position: bottom left, 0 0;
 }
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(115, 115, 115, 0.8); 
+    background: rgba(160, 160, 160, 0.8); 
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(115, 115, 115, 0.6); 
 }
