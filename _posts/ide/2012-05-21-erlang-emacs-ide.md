@@ -3,7 +3,7 @@ layout: post
 title: erlang配置emacs开发
 category: ide
 tags: [erlang, emacs, ide]
-lang: lisp
+codes: [lisp]
 ---
 
 打开emacs配置文件, 输入配置文件
