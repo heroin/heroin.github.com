@@ -16,10 +16,12 @@ tags: [github, bootstrap, jekyll, javascript]
 
 执行以下命令
 
-    # git clone https://github.com/plusjade/jekyll-bootstrap.git heroin.github.com
-    # cd heroin.github.com
-    # git remote set-url origin git@github.com:heroin/heroin.github.com.git
-    # git push origin master
+<pre class="prettyprint linenums">
+# git clone https://github.com/plusjade/jekyll-bootstrap.git heroin.github.com
+# cd heroin.github.com
+# git remote set-url origin git@github.com:heroin/heroin.github.com.git
+# git push origin master
+</pre>
 
 然后直接访问[http://heroin.github.com](http://heroin.github.com), 就能访问到你搭建的博客了.
 
@@ -47,12 +49,14 @@ jekyllbootstrap默认的首页是`index.md`
 
 markdown文件头需要几个配置, 以下是该文章的头配置
 
-    ---
-    layout: post
-    title: 在github上搭建博客
-    category: javascript
-    tags: [github, bootstrap, jekyll, javascript]
-    ---
+<pre class="prettyprint linenums">
+---
+layout: post
+title: 在github上搭建博客
+category: javascript
+tags: [github, bootstrap, jekyll, javascript]
+---
+</pre>
 
 每个markdown必须在头部加上这段. 然后下面直接写markdown代码就行了.
 
