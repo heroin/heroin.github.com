@@ -12,7 +12,7 @@ webkit支持自定义滚动条, 用图片或者样式的方式
 参考地址中没有设置html头,  
 由于我设置的是`<!DOCTYPE HTML>`使用示例中的`css`会出现滚动条不饱满的状态.  
 于是我将滚动条用样式的方式画的, 而不是图片方式展示的, 以下是我修改后的代码.
-
+<pre class="abc">
     ::-webkit-scrollbar {
         width: 16px;
         height: 16px;
@@ -45,5 +45,4 @@ webkit支持自定义滚动条, 用图片或者样式的方式
         background: rgba(160, 160, 160, 0.8); 
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); 
     }
-
-
+</pre>
