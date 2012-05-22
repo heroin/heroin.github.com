@@ -13,6 +13,7 @@
     <link href="{{ ASSET_PATH }}/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
+    {% if page.lang %}script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/lang-{{ page.lang }}.js"></script>{% endif %}
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/application.js"></script>
   </head>
 
