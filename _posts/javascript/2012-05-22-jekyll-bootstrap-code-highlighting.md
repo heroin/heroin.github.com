@@ -12,8 +12,8 @@ jekyll-bootstarp是用`markdown`写博文的, 但是markdown默认不支持`pre`
 修改`/includes/themes/twitter/default.html`, 添加几行代码
 
 <pre class="prettyprint linenums">
-<link href="{{ ASSET_PATH }}/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
+<link href="\{\{ ASSET_PATH \}\}/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
-<script type="text/javascript" src="{{ ASSET_PATH }}/js/application.js"></script>
+<script type="text/javascript" src="\{\{ ASSET_PATH \}\}/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="\{\{ ASSET_PATH \}\}/js/application.js"></script>
 </pre>
