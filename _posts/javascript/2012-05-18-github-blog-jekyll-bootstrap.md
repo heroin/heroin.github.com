@@ -16,12 +16,10 @@ tags: [github, bootstrap, jekyll, javascript]
 
 执行以下命令
 
-<pre class="prettyprint linenums">
-# git clone https://github.com/plusjade/jekyll-bootstrap.git heroin.github.com
-# cd heroin.github.com
-# git remote set-url origin git@github.com:heroin/heroin.github.com.git
-# git push origin master
-</pre>
+    # git clone https://github.com/plusjade/jekyll-bootstrap.git heroin.github.com
+    # cd heroin.github.com
+    # git remote set-url origin git@github.com:heroin/heroin.github.com.git
+    # git push origin master
 
 然后直接访问[http://heroin.github.com](http://heroin.github.com), 就能访问到你搭建的博客了.
 
