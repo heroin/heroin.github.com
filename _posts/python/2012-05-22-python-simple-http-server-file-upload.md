@@ -13,12 +13,12 @@ tags: [python, server, http]
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-&quot;&quot;&quot;Simple HTTP Server With Upload.
+"""Simple HTTP Server With Upload.
 
 This module builds on BaseHTTPServer by implementing the standard GET
 and HEAD requests in a fairly straightforward manner.
 
-&quot;&quot;&quot;
+"""
 
 
 __version__ = &quot;0.1&quot;
