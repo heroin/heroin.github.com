@@ -9,6 +9,7 @@ tagline:
   <ul class="nav nav-pills">
   {% for post in paginator.posts %}
     <li><a href="#{{ post.url | cut:"//"}}" title="{{ post.title }}">{{ post.title | truncatewords:1 }}</a></li>
+    <!-- {{ post }} -->
   {% endfor %}
   </ul>
 </div>
