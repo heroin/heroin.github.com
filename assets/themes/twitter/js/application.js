@@ -8,7 +8,7 @@
         var navTop = $('.subnav').length && $('.subnav').offset().top - 40;
         var isFixed = 0;
 
-        $win.on('scroll', function () {
+        $win.scroll(function () {
             var i, scrollTop = $win.scrollTop();
             if (scrollTop >= navTop && !isFixed) {
                 isFixed = 1;
