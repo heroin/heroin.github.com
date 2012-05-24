@@ -24,7 +24,7 @@ jekyll-bootstarp是用`markdown`写博文的, 但是markdown默认不支持`pre`
 <pre class="prettyprint linenums">
 !function ($) {
     $(function(){
-        window.prettyPrint && prettyPrint();
+        window.prettyPrint &amp;&amp; prettyPrint();
     });
 }(window.jQuery);
 </pre>
