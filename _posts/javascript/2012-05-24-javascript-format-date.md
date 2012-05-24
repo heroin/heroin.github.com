@@ -6,6 +6,7 @@ tags: [format, date, prototype, javascript]
 ---
 
 在公共模块添加以下代码引用
+
 <pre class="prettyprint linenums">
 Date.prototype.format = function(format) {
 
@@ -35,6 +36,7 @@ Date.prototype.format = function(format) {
 </pre>
 
 调用的方式如下
+
 <pre class="prettyprint linenums">
 var now = new Date().format("yyyy-MM-dd hh:mm:ss");
 </pre>
