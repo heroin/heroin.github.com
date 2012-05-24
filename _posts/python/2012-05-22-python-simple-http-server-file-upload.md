@@ -3,6 +3,8 @@ layout: post
 title: Python支持上传的SimpleHTTPServer
 category: python
 tags: [python, server, http]
+description: python文件上传
+keywords: python,文件上传,upload,file,http,httpserver
 ---
 
 在某个目录下运行, 访问[http://127.0.0.1:8000](http://127.0.0.1:8000)

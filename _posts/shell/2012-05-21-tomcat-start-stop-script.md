@@ -3,6 +3,8 @@ layout: post
 title: linux tomcat 脚本
 category: shell
 tags: [shell, linux, tomcat, script]
+description: linux下tomcat启动关闭脚本
+keywords: linux,tomcat,start,stop,script,shell
 ---
 
 <pre class="prettyprint linenums">
