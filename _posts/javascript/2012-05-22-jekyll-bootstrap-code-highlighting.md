@@ -15,10 +15,19 @@ jekyll-bootstarp是用`markdown`写博文的, 但是markdown默认不支持`pre`
 &lt;link href="{\{ ASSET_PATH }\}/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="all"&gt;
 &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="{\{ ASSET_PATH }\}/google-code-prettify/prettify.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="{\{ ASSET_PATH }\}/js/application.js"&gt;&lt;/script&gt;
 </pre>
 
-其中上传了3个文件, 请对应放好相对应的目录下.
+其中上传了2个文件, 请对应放好相对应的目录下.
+
+再添加一段`js`, 让其生效, js代码如下
+
+<pre class="prettyprint linenums">
+!function ($) {
+    $(function(){
+        window.prettyPrint && prettyPrint();
+    });
+}(window.jQuery);
+</pre>
 
 写文章的时候而不是用markdown语法, 直接将要高亮的代码用`pre`标签包围
 
