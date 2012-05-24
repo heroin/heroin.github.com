@@ -8,7 +8,7 @@ tagline:
 <div class="subnav page-launcher">
   <ul class="nav nav-pills">
   {% for post in paginator.posts %}
-    <li><a href="#{{ post.url | cut:"//"}}" title="{{ post.title }}">{{ post.title | truncate:5 }}</a></li>
+    <li><a href="#{{ post.url | cut:"//"}}" title="{{ post.title }}">{{ post.title | truncate:15 }}</a></li>
     <!-- {{ post }} -->
   {% endfor %}
   </ul>
