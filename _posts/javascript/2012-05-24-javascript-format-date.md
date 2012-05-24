@@ -7,13 +7,8 @@ tags: [format, date, prototype, javascript]
 
 在公共模块添加以下代码引用
 <pre class="prettyprint linenums">
-/**
- * 时间对象的格式化;
- */
 Date.prototype.format = function(format) {
-    /*
-     * eg:format="YYYY-MM-dd hh:mm:ss";
-     */
+
     var o = {
         "M+" :this.getMonth() + 1,
         "d+" :this.getDate(),
