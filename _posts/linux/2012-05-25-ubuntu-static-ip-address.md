@@ -37,3 +37,7 @@ keywords: linux,ubuntu,设置ip,ipaddress
     #address 192.168.1.12
     #netmask 255.255.255.0
     #gateway 192.168.1.1
+
+设置完毕后重启网卡即可
+
+    /etc/init.d/networking restart
