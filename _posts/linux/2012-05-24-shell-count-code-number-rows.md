@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 统计代码行数脚本
-category: shell
+category: linux
 tags: [shell, linux, script, sed]
 description: linux统计代码行数
 keywords: linux,shell,script,sed,代码,行数,代码量
