@@ -2,7 +2,7 @@
 layout: post
 title: ubuntu设置静态ip
 category: linux
-tags: [shell, linux, bash, key]
+tags: [shell, linux, bash, network]
 description: ubuntu设置静态ip
 keywords: linux,ubuntu,设置ip,ipaddress
 ---
