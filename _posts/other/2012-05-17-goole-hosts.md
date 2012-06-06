@@ -39,5 +39,6 @@ tags: [google, hosts, config, other]
   <tr><td>203.208.46.1</td><td>59cbv4l9s05pbaks9v77vc3mengeqors-a-oz-opensocial.googleusercontent.com</td></tr>
   <tr><td>203.208.46.1</td><td>i8brh95qor6r54nkl52hidj2ggcs4jgm-a-oz-opensocial.googleusercontent.com</td></tr>
   <tr><td>203.208.46.1</td><td>upt14k1i2veesusrda9nfotcrbp9d7p5-a-oz-opensocial.googleusercontent.com</td></tr>
-  
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  <tr><td>203.208.46.1</td></td>google.com</td></tr>
 </table>
