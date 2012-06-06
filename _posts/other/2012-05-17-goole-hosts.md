@@ -5,107 +5,109 @@ category: other
 tags: [google, hosts, config, other]
 ---
 
-    203.208.46.1    ssl.gstatic.com
-    203.208.46.1    gg.google.com
-    203.208.46.1    sandbox.google.com
-    203.208.46.1    safebrowsing-cache.google.com
-    203.208.46.1    newsfeed-dot-latest-dot-rovio-ad-engine.appspot.com
-    203.208.46.1    images-oz-opensocial.googleusercontent.com
-    203.208.46.1    images-pos-opensocial.googleusercontent.com
-    203.208.46.1    images-lso-opensocial.googleusercontent.com
-    203.208.46.1    a-oz-opensocial.googleusercontent.com
-    203.208.46.1    project-slingshot-gp.appspot.com
-    203.208.46.1    oauth.googleusercontent.com
-    203.208.46.1    ct-google.crimecitygame.com
-    203.208.46.1    toolbarqueries.clients.google.com
-    203.208.46.1    browsersync.google.com
-    203.208.46.1    www-oz-opensocial.googleusercontent.com
-    203.208.46.1    toolbarqueries.google.com.hk
-    203.208.46.1    www-opensocial.googleusercontent.com
-    203.208.46.1    ssl.google-analytics.com
-    203.208.46.1    r2303.latest.project-slingshot-hr.appspot.com
-    203.208.46.1    r3138-dot-latest-dot-project-slingshot-gp.appspot.com
-    203.208.46.1    r3115-dot-latest-dot-project-slingshot-gp.appspot.com
-    203.208.46.1    r3232-dot-latest-dot-project-slingshot-gp.appspot.com
-    203.208.46.1    r3269-dot-latest-dot-project-slingshot-gp.appspot.com
-    203.208.46.1    bt26mravu2qpe56n8gnmjnpv2inl84bf-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    8kubpeu8314p2efdd7jlv09an9i2ljdo-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    adstvca8k2ooaknjjmv89j22n9t676ve-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    ob7f2qc0i50kbjnc81vkhgmb5hsv7a8l-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    53rd6p0catml6vat6qra84rs0del836d-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    u807isd5egseeabjccgcns005p2miucq-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    r70rmsn4s0rhk6cehcbbcbfbs31pu0va-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    59cbv4l9s05pbaks9v77vc3mengeqors-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    i8brh95qor6r54nkl52hidj2ggcs4jgm-a-oz-opensocial.googleusercontent.com
-    203.208.46.1    upt14k1i2veesusrda9nfotcrbp9d7p5-a-oz-opensocial.googleusercontent.com
-
-    203.208.46.1    google.com
-    203.208.46.1    google.hk
-    203.208.46.1    www.google.com
-    203.208.46.1    www.gstatic.com
-    203.208.46.1    dl-ssl.google.com
-    203.208.46.1    maps.google.com
-    203.208.46.1    mail.google.com
-    203.208.46.1    code.google.com
-    203.208.46.1    docs.google.com
-    203.208.46.1    apis.google.com
-    203.208.46.1    sites.google.com
-    203.208.46.1    groups.google.com
-    203.208.46.1    www.googleapis.com
-    203.208.46.1    ajax.googleapis.com
-    203.208.46.1    appspot.com
-    203.208.46.1    www.appspot.com
-    203.208.46.1    www.googlevideo.com
-    203.208.46.1    www.blogger.com
-    203.208.46.1    www.google.com.hk
-    203.208.46.1    translate.google.com
-    203.208.46.1    wenda.google.com.hk
-    203.208.46.1    maps.gstatic.com
-    203.208.46.1    webcache.googleusercontent.com
-    203.208.46.1    googlecode.l.googleusercontent.com
-    203.208.46.1    mail-attachment.googleusercontent.com
-    203.208.46.1    maps-api-ssl.google.com
-    203.208.46.1    code-opensocial.googleusercontent.com
-    203.208.46.1    images1-focus-opensocial.googleusercontent.com
-    203.208.46.1    images2-focus-opensocial.googleusercontent.com
-    203.208.46.1    images3-focus-opensocial.googleusercontent.com
-    203.208.46.1    encrypted.google.com
-    203.208.46.1    chrome.google.com
-    203.208.46.1    profiles.google.com
-    203.208.46.1    plus.google.com
-    203.208.46.1    plusone.google.com
-    203.208.46.1    talkgadget.google.com
-    203.208.46.1    chatenabled.mail.google.com
-    203.208.46.1    picasaweb.google.com
-    203.208.46.1    clients1.google.com
-    203.208.46.1    clients2.google.com
-    203.208.46.1    clients3.google.com
-    203.208.46.1    clients4.google.com
-    203.208.46.1    clients5.google.com
-    203.208.46.1    clients6.google.com
-    203.208.46.1    clients7.google.com
-    203.208.46.1    clients1.googleusercontent.com
-    203.208.46.1    clients2.googleusercontent.com
-    203.208.46.1    clients3.googleusercontent.com
-    203.208.46.1    clients4.googleusercontent.com
-    203.208.46.1    clients5.googleusercontent.com
-    203.208.46.1    clients6.googleusercontent.com
-    203.208.46.1    clients7.googleusercontent.com
-    203.208.46.1    lh1.ggpht.com
-    203.208.46.1    lh2.ggpht.com
-    203.208.46.1    lh3.ggpht.com
-    203.208.46.1    lh4.ggpht.com
-    203.208.46.1    lh5.ggpht.com
-    203.208.46.1    lh6.ggpht.com
-    203.208.46.1    lh6.googleusercontent.com
-    203.208.46.1    lh5.googleusercontent.com
-    203.208.46.1    lh4.googleusercontent.com
-    203.208.46.1    lh3.googleusercontent.com
-    203.208.46.1    lh2.googleusercontent.com
-    203.208.46.1    lh1.googleusercontent.com
-    203.208.46.1    s2.googleusercontent.com
-    203.208.46.1    spreadsheets.google.com
-    203.208.46.133  mt0.google.com
-    203.208.46.134  mt1.google.com
-    203.208.46.135  khm1.google.com
-    203.208.46.136  khm0.google.com
+<table class="table table-bordered table-striped">
+  <tr><td>203.208.46.1</td><td>ssl.gstatic.com</td></tr>
+  <tr><td>203.208.46.1</td><td>gg.google.com</td></tr>
+  <tr><td>203.208.46.1</td><td>sandbox.google.com</td></tr>
+  <tr><td>203.208.46.1</td><td>safebrowsing-cache.google.com</td></tr>
+  <tr><td>203.208.46.1</td><td>newsfeed-dot-latest-dot-rovio-ad-engine.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td><td>images-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>images-pos-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>images-lso-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>project-slingshot-gp.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td><td>oauth.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>ct-google.crimecitygame.com</td></tr>
+  <tr><td>203.208.46.1</td><td>toolbarqueries.clients.google.com</td></tr>
+  <tr><td>203.208.46.1</td><td>browsersync.google.com</td></tr>
+  <tr><td>203.208.46.1</td><td>www-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>toolbarqueries.google.com.hk</td></tr>
+  <tr><td>203.208.46.1</td><td>www-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>ssl.google-analytics.com</td></tr>
+  <tr><td>203.208.46.1</td><td>r2303.latest.project-slingshot-hr.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td><td>r3138-dot-latest-dot-project-slingshot-gp.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td><td>r3115-dot-latest-dot-project-slingshot-gp.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td><td>r3232-dot-latest-dot-project-slingshot-gp.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td><td>r3269-dot-latest-dot-project-slingshot-gp.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td><td>bt26mravu2qpe56n8gnmjnpv2inl84bf-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>8kubpeu8314p2efdd7jlv09an9i2ljdo-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>adstvca8k2ooaknjjmv89j22n9t676ve-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>ob7f2qc0i50kbjnc81vkhgmb5hsv7a8l-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>53rd6p0catml6vat6qra84rs0del836d-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>u807isd5egseeabjccgcns005p2miucq-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>r70rmsn4s0rhk6cehcbbcbfbs31pu0va-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>59cbv4l9s05pbaks9v77vc3mengeqors-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>i8brh95qor6r54nkl52hidj2ggcs4jgm-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td><td>upt14k1i2veesusrda9nfotcrbp9d7p5-a-oz-opensocial.googleusercontent.com</td></tr>
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  <tr><td>203.208.46.1</td></td>google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>google.hk</td></tr>
+  <tr><td>203.208.46.1</td></td>www.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>www.gstatic.com</td></tr>
+  <tr><td>203.208.46.1</td></td>dl-ssl.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>maps.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>mail.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>code.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>docs.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>apis.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>sites.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>groups.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>www.googleapis.com</td></tr>
+  <tr><td>203.208.46.1</td></td>ajax.googleapis.com</td></tr>
+  <tr><td>203.208.46.1</td></td>appspot.com</td></tr>
+  <tr><td>203.208.46.1</td></td>www.appspot.com</td></tr>
+  <tr><td>203.208.46.1</td></td>www.googlevideo.com</td></tr>
+  <tr><td>203.208.46.1</td></td>www.blogger.com</td></tr>
+  <tr><td>203.208.46.1</td></td>www.google.com.hk</td></tr>
+  <tr><td>203.208.46.1</td></td>translate.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>wenda.google.com.hk</td></tr>
+  <tr><td>203.208.46.1</td></td>maps.gstatic.com</td></tr>
+  <tr><td>203.208.46.1</td></td>webcache.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>googlecode.l.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>mail-attachment.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>maps-api-ssl.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>code-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>images1-focus-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>images2-focus-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>images3-focus-opensocial.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>encrypted.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>chrome.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>profiles.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>plus.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>plusone.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>talkgadget.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>chatenabled.mail.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>picasaweb.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients1.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients2.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients3.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients4.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients5.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients6.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients7.google.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients1.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients2.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients3.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients4.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients5.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients6.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>clients7.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh1.ggpht.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh2.ggpht.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh3.ggpht.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh4.ggpht.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh5.ggpht.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh6.ggpht.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh6.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh5.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh4.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh3.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh2.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>lh1.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>s2.googleusercontent.com</td></tr>
+  <tr><td>203.208.46.1</td></td>spreadsheets.google.com</td></tr>
+  <tr><td>203.208.46.133</td><td>mt0.google.com</td></tr>
+  <tr><td>203.208.46.134</td><td>mt1.google.com</td></tr>
+  <tr><td>203.208.46.135</td><td>khm1.google.com</td></tr>
+  <tr><td>203.208.46.136</td><td>khm0.google.com</td></tr>
+</table>
