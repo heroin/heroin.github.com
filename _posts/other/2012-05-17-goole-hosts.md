@@ -5,7 +5,7 @@ category: other
 tags: [google, hosts, config, other]
 ---
 
-<table class="table table-bordered table-striped">
+<table>
   <tr><td>203.208.46.1</td><td>ssl.gstatic.com</td></tr>
   <tr><td>203.208.46.1</td><td>gg.google.com</td></tr>
   <tr><td>203.208.46.1</td><td>sandbox.google.com</td></tr>
