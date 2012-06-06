@@ -2,9 +2,9 @@
 <html lang="zh-CN">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
-    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}" />{% endif %}
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>{% if page.description %}
+    <meta name="description" content="{{ page.description }}" />{% endif %}{% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,8 +15,7 @@
     <link href="{{ ASSET_PATH }}/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://lib.sinaapp.com/js/bootstrap/latest/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
-    {% if page.codes %}{% for code in page.codes %} 
+    <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>{% if page.codes %}{% for code in page.codes %} 
     <script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/lang-{{ code }}.js"></script>{% endfor %}{% endif %}
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/application.js"></script>
   </head>
