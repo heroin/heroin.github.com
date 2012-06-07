@@ -48,7 +48,7 @@ Bottle 是一个非常小巧但高效的微型 Python Web 框架, 它被设计�
 2. route() 可以将一个函数与一个URL进行绑定, 在上面的示例中, route 将 "/hello/:name" 这个URL地址绑定到了 "index(name = 'World')" 这个函数上
 3. 这个是一个关联到 "/hello" 的 handler function 或者 callback , 任何对 "/hello" 这个URL的请求都将被递交到这个函数中
 4. 我们获得请求后, index() 函数返回简单的字符串
-5. 最后, run() 函数启动服务器, 并且我们设置它在 "localhost” 和 8080 端口上运行
+5. 最后, run() 函数启动服务器, 并且我们设置它在 "localhost" 和 8080 端口上运行
 
 上面这种方法仅仅只是展示一下下 Bottle 的简单, 我们还可以像下面这样, 创建一个 Bottle 对象 app, 然后我们会将所有的函数都映射到 app 的 URL 地址上, 如上示例我们可以用下面这种办法来实现: 
 
@@ -69,7 +69,7 @@ Bottle 的这种 URL 地址映射方法与我一直使用的 Flask 的地址映�
 
 ##路由器(Request Routing)
 
-Bottle 应用会有一个 URL 路由器, 它将 URL 请求地址绑定到回调函数上, 每请求一些 URL, 其对应的 回调函数就会运行一些, 而回调函数返回值将被发送到浏览器, 你可以在你的应用中通过 route() 函数添加不限数目的路由器。
+Bottle 应用会有一个 URL 路由器, 它将 URL 请求地址绑定到回调函数上, 每请求一些 URL, 其对应的 回调函数就会运行一些, 而回调函数返回值将被发送到浏览器, 你可以在你的应用中通过 route() 函数添加不限数目的路由器. 
 
 <pre class="prettyprint linenums">
 #!/usr/bin/env python
@@ -98,6 +98,59 @@ Bottle 有自己特有的 URL 语法, 这让我们可以很轻松的在 URL 地�
 def hello(name = 'World'):
     return 'Hello {}!'.format(name)
 </pre>
+
+上面的路由器, 可以让我们通过"/hello/abc"或者"/hello/heroin"等地址来访问, 而 Bottle 返回的内容将是"Hello abc!" 或者 "Hello heroin!", "/hello/"之后的字符串交被返回来, 默认的通配符将匹配所有下一个"/"出现之前的字符. 我们还可以对通配符进行格式化: 
+
+<pre class="prettyprint linenums">
+@route('/object/:id#[0-9]+#')
+def view_object(id):
+    return 'Object ID: {}'.format(id)
+</pre>
+
+上面的路由将只允许 id 为由数字"0-9"组成的数字, 而其它的字符串都将返回 404 错误. 
+
+##HTTP 请求方法(Request Methods)
+
+HTTP 协议为不同的需求定义了许多不同的请求方法, 在 Bottle 中, GET方法将是所有未指明请求访问的路由会默认使用的方法, 这些未指明方法的路由都将只接收 GET 请求, 要处理如 POST, PUT 或者 DELETE 等等的其它请求, 你必须主动地在 route() 函数中添加 method 关键字, 或者使用下面这些 decorators：@get(), @post(), @put(), @delete(). 
+
+POST 方法在经常被用来处理 HTML 的表单数据, 下面的示例演示了一个 登陆表单的处理过程：
+
+<pre class="prettyprint linenums">
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+from bottle import get, post, request
+
+#@route('/login')
+@get('/login')
+def login_form():
+    return '''&lt;form method = "POST"&gt;
+                &lt;input name="name" type="text" /&gt;
+                &lt;input name="password" type="password" /&gt;
+                &lt;input type="submit" value="Login" /&gt;
+                &lt;/form&gt;'''
+
+#@route('/login', method = 'POST')
+@post('/login')
+def login():
+    name = request.forms.get('name')
+    password = request.forms.get('password')
+    if check_login(name, password):
+        return '&lt;p&gt;Your login was correct&lt;/p&gt;'
+    else:
+        return '&lt;p&gt;Login failed&lt;/p&gt;'
+</pre>
+
+在上面的示例中, /login 被绑定到两个不同的回调函数上, 一个处理 GET 请求, 另一个处理 POST 请求, 第一个返我们的登陆表单, 第二个接收登陆表单提交的数据，并进行处理, 得到结果后, 返回结果. 
+
+
+<pre class="prettyprint linenums">
+</pre>
+
+
+<pre class="prettyprint linenums">
+</pre>
+
 
 <pre class="prettyprint linenums">
 </pre>
