@@ -50,8 +50,56 @@ Bottle 是一个非常小巧但高效的微型 Python Web 框架, 它被设计�
 4. 我们获得请求后, index() 函数返回简单的字符串
 5. 最后, run() 函数启动服务器, 并且我们设置它在 "localhost” 和 8080 端口上运行
 
+上面这种方法仅仅只是展示一下下 Bottle 的简单, 我们还可以像下面这样, 创建一个 Bottle 对象 app, 然后我们会将所有的函数都映射到 app 的 URL 地址上, 如上示例我们可以用下面这种办法来实现: 
 
+<pre class="prettyprint linenums">
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 
+from bottle import Bottle, run
+
+app = Bottle()
+@app.route('/hello')
+def hello():
+    return "Hello World!"
+run(app, host='localhost', port=8080)
+</pre>
+
+Bottle 的这种 URL 地址映射方法与我一直使用的 Flask 的地址映射方法很相似, 到现在为止, 我似乎只看到它们只是语法上面有些话不同. 
+
+##路由器(Request Routing)
+
+Bottle 应用会有一个 URL 路由器, 它将 URL 请求地址绑定到回调函数上, 每请求一些 URL, 其对应的 回调函数就会运行一些, 而回调函数返回值将被发送到浏览器, 你可以在你的应用中通过 route() 函数添加不限数目的路由器。
+
+<pre class="prettyprint linenums">
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+from bottle import route
+
+@route('/')
+@route('/index.html')
+def index():
+    return '<a href="/hello">Go to Hello World Page</a>'
+@route('/hello')
+def hello():
+    return 'Hello World'
+</pre>
+
+就像你看到, 你所发出的访问请求(URL), 应用并没有返回服务器上真实的文件, 而是返回与该URL绑定的函数的返回值, 如果其一个URL没有被绑定到任何回调函数上, 那么 Bottle 将返回"404 Page Not Found"的错误页面
+
+##动态路由(Dynamic Routes)
+
+Bottle 有自己特有的 URL 语法, 这让我们可以很轻松的在 URL 地址中加入通配符, 这样, 一个 route 将可以映射到无数的 URL 上, 这些动态的 路由常常被用来创建一些有规律性的内容页面的地址, 比如博客文章地址"/archive/1234.html"或者"/wiki/Page_Title", 这在上面的示例我已经演示过了, 还记得吗?
+
+<pre class="prettyprint linenums">
+@route('/hello/:name')
+def hello(name = 'World'):
+    return 'Hello {}!'.format(name)
+</pre>
+
+<pre class="prettyprint linenums">
+</pre>
 
 
 <pre class="prettyprint linenums">
