@@ -2,7 +2,7 @@
 layout: post
 title: Python支持上传的SimpleHTTPServer
 category: python
-tags: [python, server, http]
+tags: [python, server, http, web]
 description: python文件上传
 keywords: python,文件上传,upload,file,http,httpserver
 ---

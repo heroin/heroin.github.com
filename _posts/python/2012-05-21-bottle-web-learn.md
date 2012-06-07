@@ -2,7 +2,7 @@
 layout: post
 title: 使用bottle搭建web
 category: python
-tags: [python, bottle]
+tags: [python, bottle, web]
 description: bottle搭建web
 keywords: web框架,python,bottle,easy_install,github
 ---
