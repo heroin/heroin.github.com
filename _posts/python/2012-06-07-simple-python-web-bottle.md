@@ -648,19 +648,19 @@ Bottle 支持很多服务器, 下面列举的并不是所有的:
   </thead>
   <tbody>
     <tr><td>cgi</td><td>&nbsp;</td><td>以CGI脚本运行</td></tr>
-    <tr><td>flup</td><td><a href="http://trac.saddi.com/flup">http://trac.saddi.com/flup</a></td><td>以 FastCGI 进程运行</td></tr>
-    <tr><td>gae</td><td><a href="http://code.google.com/appengine/docs/python/overview.html">http://code.google.com/appengine/docs/python/overview.html</a></td><td>Google App Engine 部属</td></tr>
-    <tr><td>wsgiref</td><td><a href="http://docs.python.org/library/wsgiref.html">http://docs.python.org/library/wsgiref.html</a></td><td>默认为单线程的服务器</td></tr>
-    <tr><td>cherrypy</td><td><a href="http://www.cherrypy.org/">http://www.cherrypy.org/</a></td><td>多线程服务器</td></tr>
-    <tr><td>paste</td><td><a href="http://pythonpaste.org/">http://pythonpaste.org/</a></td><td>多线程服务器</td></tr>
-    <tr><td>rocket</td><td><a href="http://pypi.python.org/pypi/rocket">http://pypi.python.org/pypi/rocket</a></td><td>多线程服务器</td></tr>
-    <tr><td>gunicorn</td><td><a href="http://pypi.python.org/pypi/gunicorn">http://pypi.python.org/pypi/gunicorn</a></td><td>部分用 C 编写</td></tr>
-    <tr><td>fapws3</td><td><a href="http://www.fapws.org/">http://www.fapws.org/</a></td><td>Asynchronous, 基于C 开发</td></tr>
-    <tr><td>tornado</td><td><a href="http://www.tornadoweb.org/">http://www.tornadoweb.org/</a></td><td>Asynchronous, 服务了部分 FaceBook 的服务</td></tr>
-    <tr><td>twisted</td><td><a href="http://twistedmatrix.com/">http://twistedmatrix.com/</a></td><td>Asynchronous</td></tr>
-    <tr><td>diesel</td><td><a href="http://dieselweb.org/">http://dieselweb.org/</a></td><td>Asynchronous, 基于 Greenlet</td></tr>
-    <tr><td>meinheld</td><td><a href="http://pypi.python.org/pypi/meinheld">http://pypi.python.org/pypi/meinheld</a></td><td>Asynchronous, 部分基于 C 开发</td></tr>
-    <tr><td>bjoern</td><td><a href="http://pypi.python.org/pypi/bjoern">http://pypi.python.org/pypi/bjoern</a></td><td>Asynchronous, 非常快, 基于C开发</td></tr>
+    <tr><td>flup</td><td><a href="http://trac.saddi.com/flup" target="_blank">http://trac.saddi.com/flup</a></td><td>以 FastCGI 进程运行</td></tr>
+    <tr><td>gae</td><td><a href="http://code.google.com/appengine/docs/python/overview.html" target="_blank">http://code.google.com/appengine/docs/python/overview.html</a></td><td>Google App Engine 部属</td></tr>
+    <tr><td>wsgiref</td><td><a href="http://docs.python.org/library/wsgiref.html" target="_blank">http://docs.python.org/library/wsgiref.html</a></td><td>默认为单线程的服务器</td></tr>
+    <tr><td>cherrypy</td><td><a href="http://www.cherrypy.org/" target="_blank">http://www.cherrypy.org/</a></td><td>多线程服务器</td></tr>
+    <tr><td>paste</td><td><a href="http://pythonpaste.org/" target="_blank">http://pythonpaste.org/</a></td><td>多线程服务器</td></tr>
+    <tr><td>rocket</td><td><a href="http://pypi.python.org/pypi/rocket" target="_blank">http://pypi.python.org/pypi/rocket</a></td><td>多线程服务器</td></tr>
+    <tr><td>gunicorn</td><td><a href="http://pypi.python.org/pypi/gunicorn" target="_blank">http://pypi.python.org/pypi/gunicorn</a></td><td>部分用 C 编写</td></tr>
+    <tr><td>fapws3</td><td><a href="http://www.fapws.org/" target="_blank">http://www.fapws.org/</a></td><td>Asynchronous, 基于C 开发</td></tr>
+    <tr><td>tornado</td><td><a href="http://www.tornadoweb.org/" target="_blank">http://www.tornadoweb.org/</a></td><td>Asynchronous, 服务了部分 FaceBook 的服务</td></tr>
+    <tr><td>twisted</td><td><a href="http://twistedmatrix.com/" target="_blank">http://twistedmatrix.com/</a></td><td>Asynchronous</td></tr>
+    <tr><td>diesel</td><td><a href="http://dieselweb.org/" target="_blank">http://dieselweb.org/</a></td><td>Asynchronous, 基于 Greenlet</td></tr>
+    <tr><td>meinheld</td><td><a href="http://pypi.python.org/pypi/meinheld" target="_blank">http://pypi.python.org/pypi/meinheld</a></td><td>Asynchronous, 部分基于 C 开发</td></tr>
+    <tr><td>bjoern</td><td><a href="http://pypi.python.org/pypi/bjoern" target="_blank">http://pypi.python.org/pypi/bjoern</a></td><td>Asynchronous, 非常快, 基于C开发</td></tr>
     <tr><td>auto</td><td>&nbsp;</td><td>自动选择一个可用的 服务器</td></tr>
   </tbody>
 </table>
