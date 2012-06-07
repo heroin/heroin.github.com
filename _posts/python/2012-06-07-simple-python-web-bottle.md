@@ -14,7 +14,7 @@ Bottle 是一个非常小巧但高效的微型 Python Web 框架, 它被设计�
 - 工具集(Utilites): 快速的读取 form 数据, 上传文件, 访问 cookies, headers 或者其它 HTTP 相关的 metadata
 - 服务器(Server): 内置HTTP开发服务器, 并且支持 paste, fapws3, bjoern, Google App Engine, Cherrypy 或者其它任何 WSGI HTTP 服务器
 
-#安装 Bottle
+##安装 Bottle
 
 正如上面所说的,  Bottle 被设计为仅仅只有一个文件, 我们甚至可以不安装它, 直接将 bottle.py 文件下载并复制到我们的应用中就可以使用了, 这是一个好办法, 但是如果还是想将其安装, 那么我们可以像安装其它的 Python 模块一样: 
 
@@ -28,7 +28,7 @@ Bottle 是一个非常小巧但高效的微型 Python Web 框架, 它被设计�
 
 我们可以将下面的创建 Bottle 实例的示例代码复制到 app.py 文件中, 运行该文件即可. 
 
-#示例: Bottle 的 "Hello World" 程序
+###示例: Bottle 的 "Hello World" 程序
 
 下面的代码我们创建了一个十分简单但是完整的 Bottle 应用程序(在Python Consle)中
 
@@ -69,7 +69,7 @@ run(app, host='localhost', port=8080)
 
 Bottle 的这种 URL 地址映射方法与我一直使用的 Flask 的地址映射方法很相似, 到现在为止, 我似乎只看到它们只是语法上面有些话不同. 
 
-#路由器(Request Routing)
+##路由器(Request Routing)
 
 Bottle 应用会有一个 URL 路由器, 它将 URL 请求地址绑定到回调函数上, 每请求一些 URL, 其对应的 回调函数就会运行一些, 而回调函数返回值将被发送到浏览器, 你可以在你的应用中通过 route() 函数添加不限数目的路由器. 
 
@@ -88,7 +88,7 @@ def hello():
 
 就像你看到, 你所发出的访问请求(URL), 应用并没有返回服务器上真实的文件, 而是返回与该URL绑定的函数的返回值, 如果其一个URL没有被绑定到任何回调函数上, 那么 Bottle 将返回"404 Page Not Found"的错误页面
 
-##动态路由(Dynamic Routes)
+###动态路由(Dynamic Routes)
 
 Bottle 有自己特有的 URL 语法, 这让我们可以很轻松的在 URL 地址中加入通配符, 这样, 一个 route 将可以映射到无数的 URL 上, 这些动态的 路由常常被用来创建一些有规律性的内容页面的地址, 比如博客文章地址"/archive/1234.html"或者"/wiki/Page_Title", 这在上面的示例我已经演示过了, 还记得吗?
 
@@ -108,7 +108,7 @@ def view_object(id):
 
 上面的路由将只允许 id 为由数字"0-9"组成的数字, 而其它的字符串都将返回 404 错误. 
 
-##HTTP 请求方法(Request Methods)
+###HTTP 请求方法(Request Methods)
 
 HTTP 协议为不同的需求定义了许多不同的请求方法, 在 Bottle 中, GET方法将是所有未指明请求访问的路由会默认使用的方法, 这些未指明方法的路由都将只接收 GET 请求, 要处理如 POST, PUT 或者 DELETE 等等的其它请求, 你必须主动地在 route() 函数中添加 method 关键字, 或者使用下面这些 decorators:@get(), @post(), @put(), @delete(). 
 
@@ -139,11 +139,11 @@ def login():
 
 在上面的示例中, /login 被绑定到两个不同的回调函数上, 一个处理 GET 请求, 另一个处理 POST 请求, 第一个返我们的登陆表单, 第二个接收登陆表单提交的数据, 并进行处理, 得到结果后, 返回结果. 
 
-##自动回退(Automatic Fallbacks)
+###自动回退(Automatic Fallbacks)
 
 特殊的 HEAD 方法, 经常被用来处理一些仅仅只需要返回请求元信息而不需要返回整个请求结果的事务, 这些HEAD方法十分有用, 可以让我们仅仅只获得我们需要的数据, 而不必要返回整个文档, Bottle 可以帮助我们很简单的实现这些功能, 它会将这些请求映射到与URL绑定的回调函数中, 然后自动截取请求需要的数据, 这样一来, 你不再需要定义任何特殊的 HEAD 路由了. 
 
-#静态文件路由(Routing Static Files)
+##静态文件路由(Routing Static Files)
 
 对于静态文件,  Bottle 内置的服务器并不会自动的进行处理, 这需要你自己定义一个路由, 告诉服务器在哪些文件是需要服务的, 并且在哪里可以找到它们, 我们可以写如下面这样的一个路由器:
 
@@ -163,7 +163,7 @@ def server_static(path):
     return static_file(path, root='/path/to/your/static/files')
 </pre>
 
-#错误页面(Error Pages)
+##错误页面(Error Pages)
 
 如果任何请求的URL没有的到匹配的回调函数, 那么 Bottle 都会返回错误页面, 你可以使用 error() decorator 来抓取 HTTP 状态, 并设置自己的相关回调函数, 比如下面我们的处理404错误的函数: 
 
@@ -175,7 +175,7 @@ def error404(error):
 
 这个时候, 404 文件未找到错误将被上面的自定义404错误处理方法代替, 传送给错误处理函数的唯一的一个参数是一个 HTTPError 实例, 它非常将普通的 request, 所以, 你也可以有 request 中读取到, 也可以写入 response 中, 并且返回任何 HTTPError 支持的数据类型. 
 
-#生成内容(Generating Content)
+##生成内容(Generating Content)
 
 在纯粹的 WSGI中, 你的应用能返回的数据类型是十分有限的, 你必须返回可迭代的字符串, 你能返回字符串是因为字符串是可以迭代的, 但是这导致服务器将你的内容按一字符一字符的传送, 这个时候, Unicode 字符将不允许被返回了, 这是肯定不行的. 
 
@@ -198,7 +198,7 @@ Bottle 则支持了更多的数据类型, 它甚至添加了一个 Content-Lengt
 
 如果你返回一个 str 类子类的实例, 并且带有 read() 方法, 那它还是将按 字符串进行处理, 因为字符串有更高一级的优先处理权. 
 
-##改变默认编码
+###改变默认编码
 
 Bottle 依照 Content-Type 头文件中 charset 参数来对字符串进行编码, 该头文件默认为 text/html; charset=UTF8 , 并且可以被 Response.content_type 属性修改, 或者直接被 Response.charset 属性修改: 
 
@@ -217,7 +217,7 @@ def get_latin():
 
 由于某些罕见的原因, Python 编码的名称可能与 HTTP 编码的名称不一致, 这时你需要做两方法的工作首先设置 Response.content_type 头文件, 然后还需要设置 Response.charset. 
 
-##静态文件
+###静态文件
 
 你可以直接返回文件, 但是 Bottle 推荐使用 static_file() 方法, 它会自动的猜测文件的 mime-type, 追加 Last-Modified 头文件, 完全的自定义需要服务的文件路径, 并且能处理错误(比如 404), 并且它还支持 If-Modified-Since 头文件并且可以返回 304 Not Modified 响应, 你还可以使用一个自定义的 mime-type 来重写 mime-type 猜测的值. 
 
@@ -244,7 +244,7 @@ def download(filename):
     return static_file(filename, root='/path/to/static/files', download=filename)
 </pre>
 
-##HTTP 错误与重定向
+###HTTP 错误与重定向
 
 abort() 函数是创建 HTTP 错误页面的快捷方式: 
 
@@ -268,7 +268,7 @@ def wrong():
 
 除了 HTTPResponse 或者 HTTPError 异常外, 还会有 500 Internal Server Error 响应. 
 
-##Response 实例
+###Response 实例
 
 响应的无数据如 HTTP 状态码, 响应头文件, 或者 Cookies 都被保存在一个叫做 response 的对象中, 并传送给浏览器, 你可以直接操作这些无数据或者写一些预定义的 helper 方法来处理它们. 
 
@@ -292,7 +292,7 @@ response.set_header('Set-Cookie','name=value')
 response.add_header('Set-Cookie','name1=value1')
 </pre>
 
-##Cookies
+###Cookies
 
 你可以使用 Request.get_cookie() 访问已经设置了的 Cookie, 可以使用 Response.set_cookie() 设置 Cookie:
 
@@ -344,11 +344,11 @@ def restricted_area(self):
 
 另外, Bottle 会自动 pickle 与 unpickle 你存储到已签名的 Cookie 上的数据, 这表示你可以向 Cookie 中存储任何可以 pickle 的数据对象, 只要其大小不超过 4Kb即可. 
 
-###访问请求数据(Accessing Request Data)
+####访问请求数据(Accessing Request Data)
 
 Bottle 的全局对象 request 提供了对 HTTP相关的无数据如 Cookies, Headers, 或者 POST 表单数据的访问, 该对象在任何时候都保存着当前请求的数据, 只要其在一个路由的回调函数中访问即可, 它甚至还可以在多线程环境中工作. 
 
-##HTTP 头文件
+###HTTP 头文件
 
 头文件信息都保存在 Request.header 中, 其成员是一个键区分大小写的 HeaderDict 实例: 
 
@@ -363,7 +363,7 @@ def is_ajax():
         return 'This is a normal request'
 </pre>
 
-##Cookies
+###Cookies
 
 Cookie 已一个普通的 dictionary 形式保存在 Request.COOKIES 对象中,  Request.get_cookie()@ 方法可以对签名的 Cookie 进行访问, 下面示例展示了一个基于 Cookie 的访问计数器: 
 
@@ -378,7 +378,7 @@ def counter():
     return 'You visited this page {} times'.format(count)
 </pre>
 
-##查询字符串(Query Strings)
+###查询字符串(Query Strings)
 
 查询字符串常常被用来传递一些小数目的键值对参数到服务器, 你可以使用 Request.GET 字典对其进行访问, 使用 Request.query_string 来获得整个字符串: 
 
@@ -392,7 +392,7 @@ def display_forum():
     return 'Forum ID: {} ( Page: {} )'.format(forum_id, page)
 </pre>
 
-##POST 表单数据与文件上传
+###POST 表单数据与文件上传
 
 POST 与 PUT 请求中,  request 可以包含各种编码方式的数据, 使用 Request.forms 对象可以访问普通的 POST 表单数据, 文件上传时提交的数据被单独以 cgi.FieldStorage 实例的形式存储在 Request.files 中, 而 Request.body 按原始数据的方式保存有一个文件对象的数据. 
 
@@ -422,7 +422,7 @@ def do_upload():
     return "You missed a field"
 </pre>
 
-##WSGI 环境
+###WSGI 环境
 
 Request 对象将 WSGI 环境数据都以 dictionary 等式保存在 Request.environ 中, 允许你像访问字典数据一样访问其值: 
 
@@ -435,7 +435,7 @@ def show_ip():
     return 'Your IP is : {}'.format(ip)
 </pre>
 
-#模板(Templates)
+##模板(Templates)
 
 Bottle 内置了一个快速且强大的模板引擎, 叫作: \*SimpleTemplate Engine\* , 你可以使用 template() 函数 或者 view() decorator 来编译一个模板, 你所要作的仅仅只是提供该模板, 以及要传送给模板的数据, 下面是一个模板的简单示例: 
 
@@ -450,7 +450,7 @@ def hello(name = 'World')
 
 view() decorator 允许你返回一组需要传送给模板的数据字典即可, 而不需要再重新传送模板名称: 
 
-##模板语法
+###模板语法
 
 模板语法是非常精巧的, 其工作原理基本可以说成是: 将模板文件中的代码进行正确的缩进处理, 以至你不再需要担心块缩进问题: 
 
@@ -464,11 +464,11 @@ view() decorator 允许你返回一组需要传送给模板的数据字典即可
 %end
 </pre>
 
-##缓存
+###缓存
 
 模板被编译之后会缓存至内存中, 你可以使用 bottle.TEMPLATES.clear() 去手工清除它们. 
 
-#插件(Plugins)
+##插件(Plugins)
 
 这是 Bottle 0.9 版本才有的新功能, 插件可以提供 Bottle 核心同有提供的功能集, 在"可用的 Bottle 插件列表": [http://bottlepy.org/docs/dev/plugins/index.html](http://bottlepy.org/docs/dev/plugins/index.html) 中你可以找到现在可用的插件, 你还可以开发自己的 Bottle 插件, 比如 sqlite 插件, 可以让你可以使用 db 来访问一个到SQLite 数据的链接:
 
@@ -492,7 +492,7 @@ def contact_page():
     return template('contact')
 </pre>
 
-##在整个应用中安装插件
+###在整个应用中安装插件
 
 插件可以被安装到整个应用中, 或者仅仅只针对某几个路由安装, 绝大多数插件都被安装到整个应用中, 以为所有路由服务. 要安装一个插件, 只需要将插件的名称作为第一个参数传递给 install() 函数即可: 
 
@@ -502,7 +502,7 @@ from bottle_sqlite import SQLitePlugin
 install(SQLitePlugin(dbfile='/tmp/test.db'))
 </pre>
 
-##卸载已安装的插件
+###卸载已安装的插件
 
 你可以使用名称, 类或者对象来卸载一个已经安装的插件
 
@@ -517,7 +517,7 @@ uninstall(True) # 一次性卸载所有已安装的插件
 
 插件可以在任何时间安装与卸载, 甚至是处理某个请求的回调函数中, 每一次已经安装的插件树更新时, 路由缓存都会跟着更新. 
 
-##与路由绑定的插件安装
+###与路由绑定的插件安装
 
 route() 的 apply 参数可以指定某个回调函数要安装的插件: 
 
@@ -529,7 +529,7 @@ def create(db):
     db.execute('INSERT INTO ….')
 </pre>
 
-##插件黑名单
+###插件黑名单
 
 如果可以使用 route() 方法中的 skip 参数指定插件黑名单, 如下: 
 
@@ -545,7 +545,7 @@ def open_db(db):
     abort(404, 'No such database')
 </pre>
 
-##插件与子应用
+###插件与子应用
 
 大多数插件都被安装到需要它的具体的应用中, 所以, 它们不应该影响注册给Bottle 应用的子应用: 
 
@@ -564,11 +564,11 @@ root.install(plugins.WTForms())
 route.mount(apps.blog, '/blog', skip=None)
 </pre>
 
-#开发(Development)
+##开发(Development)
 
 上面已经介绍了一些基本的关于 Bottle 的知识, 如果你现在想使用 Bottle 开发自己的应用, 那么下面这些技巧对于你的项目来说可能很有帮助: 
 
-##默认应用
+###默认应用
 
 Bottle 维护着一份 Bottle 实例的栈, 而 route() 其实是对 Bottle.route() 的快捷访问, 以这种方法产生的路由都属于默认应用: 
 
@@ -600,7 +600,7 @@ app = default_app.pop()
 
 app() 与 default_app() 都是 AppStack 的实例, 并且实现的类 Stack的API, 你可以 Push 或者 Pop应用到这个 stack 中. 
 
-##Debug 模式
+###Debug 模式
 
 在开发的前期, Debug 模式将非常有助于你的开发: 
 
@@ -614,7 +614,7 @@ bottle.debug(True)
 - 模板不会被缓存
 - 插件将立即被安装
 
-##自动重载
+###自动重载
 
 在开发的过程, 你可能需要经常修改你的代码, 又经常需要重启你的服务器以更新这些修改, Bottle 提供了一个自动重载的工具, 这使得你对任何一个应用中的文件的修改都会被及时的更新到运行中的应用中: 
 
@@ -628,11 +628,11 @@ reloader 是这么工作的:  主进程并不会启动服务器, 但是它会按
 
 重载是基于是否可以关闭子进程的, 如果你运行在 Windows 或者任何其它不支持 signal.SIGINT 的操作系统上时, @signal.SIGTERM@ 被用来终止子进程. 
 
-#部属(Deployment)
+##部属(Deployment)
 
 Bottle 默认是运行在内置的 wsgiref WSGIServer上的, 该无线程服务器对于开发来说再好不过了, 但是对于日渐壮大的应用或者对于实际部属来说, 并不是最好的选择. 
 
-##多线程服务器
+###多线程服务器
 
 提高效率的最快速的办法, 就是将应用部属到一个多线程的服务器或者类似 Asynchronous WSGI 的服务器上, 比如 paste 或者 cherrypy , 并且告诉 Bottle 以这些服务器启动, 而不是自己内置的服务器. 
 
@@ -673,6 +673,6 @@ from paste import httpserver
 httpserver.serve(bottle.default_app(), host='0.0.0.0', port = 80)
 </pre>
 
-##多服务器进程
+###多服务器进程
 
 一个 Python 进程只能使用到一个 CPU, 即时服务器硬件有多个CPU, 你可以在不同的端口中启动多个应用, 每一个应用使用一个 CPU, 然后使用分流服务器对访问进行分流, 比如 Apache mod_wsgi 或者 Nginx 等都可以作为前端分流服务器. 
