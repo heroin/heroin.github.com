@@ -3,8 +3,8 @@ layout: post
 title: windows 注册表 修改系统环境变量
 category: windows
 tags: [windows, regedit, path, system]
-description: windows下注册表修改系统环境变量
 keywords: windows,regedit,注册表,环境变量,注册表修改环境变量
+description: windows下注册表修改系统环境变量
 ---
 
 公司电脑加了域之后, 无法直接修改`系统环境变量`, 只能添加`用户环境变量`的形式.

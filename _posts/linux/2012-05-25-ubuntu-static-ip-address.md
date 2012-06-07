@@ -3,8 +3,8 @@ layout: post
 title: ubuntu设置静态ip
 category: linux
 tags: [shell, linux, bash, network]
-description: ubuntu设置静态ip
 keywords: linux,ubuntu,设置ip,ipaddress
+description: ubuntu设置静态ip
 ---
 
 编辑`/etc/network/interfaces`文件

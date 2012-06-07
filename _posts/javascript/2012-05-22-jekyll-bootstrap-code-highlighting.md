@@ -3,8 +3,8 @@ layout: post
 title: jekyll-bootstrap添加代码高亮
 category: javascript
 tags: [bootstrap, jekyll, javascript, prettify, jquery]
-description: jekyll bootstarp 写博文, 让markdown支持代码高亮
 keywords: jekyll,markdown,javascript,jquery,google-prettify,prettify
+description: jekyll bootstarp 写博文, 让markdown支持代码高亮
 ---
 
 jekyll-bootstarp是用`markdown`写博文的, 但是markdown默认不支持`pre`加class属性

@@ -3,8 +3,8 @@ layout: post
 title: google hosts
 category: other
 tags: [google, hosts, config, other]
-description: 提高google访问速度和稳定性
 keywords: google hosts, google host配置, hosts
+description: 提高google访问速度和稳定性
 ---
 
 <table class="table table-bordered table-striped">
