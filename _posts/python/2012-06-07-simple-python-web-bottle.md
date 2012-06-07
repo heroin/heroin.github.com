@@ -80,7 +80,8 @@ from bottle import route
 @route('/')
 @route('/index.html')
 def index():
-    return '<a href="/hello">Go to Hello World Page</a>'
+    return '&lt;a href="/hello"&gt;Go to Hello World Page&lt;/a&gt;'
+
 @route('/hello')
 def hello():
     return 'Hello World'
