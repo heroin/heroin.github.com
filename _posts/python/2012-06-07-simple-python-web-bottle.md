@@ -513,11 +513,164 @@ uninstall('sqlite') # 卸载所有具有该名称的插件
 uninstall(True) # 一次性卸载所有已安装的插件
 </pre>
 
-插件可以在任何时间安装与卸载, 甚至是处理某个请求的回调函数中, 每一次已经安装的插件树更新时,  路由缓存都会跟着更新. 
+插件可以在任何时间安装与卸载, 甚至是处理某个请求的回调函数中, 每一次已经安装的插件树更新时, 路由缓存都会跟着更新. 
+
+##与路由绑定的插件安装
+
+route() 的 apply 参数可以指定某个回调函数要安装的插件: 
 
 <pre class="prettyprint linenums">
+sqlite_plugin = SQLitePlugin(dbfile='/tmp/test.db')
+
+@route('/create', apply=[sqlite_plugin])
+def create(db):
+    db.execute('INSERT INTO ….')
 </pre>
 
+##插件黑名单
+
+如果可以使用 route() 方法中的 skip 参数指定插件黑名单, 如下: 
 
 <pre class="prettyprint linenums">
+sqlite_plugin = SQLitePlugin(dbfile='/tmp/test.db')
+install sqlite_plugin)
+
+@route('/open/:db', skip=[sqlite_plugin])
+def open_db(db):
+    if db in ['test','test2']:
+        sqlite_plugin.dbfile = '/tmp/{}.db'.format(db)
+        return 'Database File Switched to : /tmp/{}.db'.format(db)
+    abort(404, 'No such database')
 </pre>
+
+##插件与子应用
+
+大多数插件都被安装到需要它的具体的应用中, 所以, 它们不应该影响注册给Bottle 应用的子应用: 
+
+<pre class="prettyprint linenums">
+root = Bottle()
+root.mount(apps.blog, '/blog')
+@route.route('/contact', template='contact')
+def contact():
+    return {'email':'contact@example.com')
+root.install(plugins.WTForms())
+</pre>
+
+上面的示例代码中, 不管我们什么时候 mount 一个子应用到主应用上, 主应用都会为子应用设定一个代理, 所以上面的 WTForms 插件将只会影响到 '/contact' 路径, 但是不会影响到 '/blog' 子应用的所有URL, 但是这处理方式可以使用下面的方法覆盖: 
+
+<pre class="prettyprint linenums">
+route.mount(apps.blog, '/blog', skip=None)
+</pre>
+
+#开发(Development)
+
+上面已经介绍了一些基本的关于 Bottle 的知识, 如果你现在想使用 Bottle 开发自己的应用, 那么下面这些技巧对于你的项目来说可能很有帮助: 
+
+##默认应用
+
+Bottle 维护着一份 Bottle 实例的栈, 而 route() 其实是对 Bottle.route() 的快捷访问, 以这种方法产生的路由都属于默认应用: 
+
+<pre class="prettyprint linenums">
+@route('/')
+def hello():
+    return 'Hello World'
+</pre>
+
+对于小应用来说, 这已经足够了, 但是随着应用的不断增大, 这种方法显然不容易维护, 所以我们可以使用子应用, 将整个项目的功能细分: 
+
+<pre class="prettyprint linenums">
+blog = Bottle()
+@blog.route('/')
+def index():
+    return 'This is blog Index page'
+</pre>
+
+将应用分离之后, 程序的维护性提高了很多, 而且可重用性也提高很多, 其它的开发人员就可以放心的从你的模块中导入应用程序对象, 并使用 Bottle.mount() 将你的应用与他们的应用整全到一起. 另外一种替代方法, 你可以使用 应用栈 , 这让你可以在所有子应用中都使用默认的 route 方法: 
+
+<pre class="prettyprint linenums">
+default_app.push()
+
+@route('/')
+def hello():
+    return 'Hello World'
+app = default_app.pop()
+</pre>
+
+app() 与 default_app() 都是 AppStack 的实例, 并且实现的类 Stack的API, 你可以 Push 或者 Pop应用到这个 stack 中. 
+
+##Debug 模式
+
+在开发的前期, Debug 模式将非常有助于你的开发: 
+
+<pre class="prettyprint linenums">
+bottle.debug(True)
+</pre>
+
+在这种模式下, Bottle 可以提供更多的 debugging 信息, 即使程序出现一个错误, 它同时还关闭了一些优化功能, 添加了一些配置的检测功能, 下面是该模式不完整的功能列表: 
+
+- 默认错误页面将返回一个对该错误的跟踪
+- 模板不会被缓存
+- 插件将立即被安装
+
+##自动重载
+
+在开发的过程, 你可能需要经常修改你的代码, 又经常需要重启你的服务器以更新这些修改, Bottle 提供了一个自动重载的工具, 这使得你对任何一个应用中的文件的修改都会被及时的更新到运行中的应用中: 
+
+<pre class="prettyprint linenums">
+from bottle import run
+
+run(reloader=True)
+</pre>
+
+reloader 是这么工作的:  主进程并不会启动服务器, 但是它会按照同样的参数创建一个子进程, 这使得所有模块级的代码都会被运行两次. 子进程的运行环境中会有一个叫作 os.environ['BOTTLE_CHILD'] = True 的参数, 当任何一个已经加载的模块有修改时, 子进程会被停止, 然后由主进程重新开启新的子进程, 对模板的修改将不会引发一次重载. 
+
+重载是基于是否可以关闭子进程的, 如果你运行在 Windows 或者任何其它不支持 signal.SIGINT 的操作系统上时, @signal.SIGTERM@ 被用来终止子进程. 
+
+#部属(Deployment)
+
+Bottle 默认是运行在内置的 wsgiref WSGIServer上的, 该无线程服务器对于开发来说再好不过了, 但是对于日渐壮大的应用或者对于实际部属来说, 并不是最好的选择. 
+
+##多线程服务器
+
+提高效率的最快速的办法, 就是将应用部属到一个多线程的服务器或者类似 Asynchronous WSGI 的服务器上, 比如 paste 或者 cherrypy , 并且告诉 Bottle 以这些服务器启动, 而不是自己内置的服务器. 
+
+<pre class="prettyprint linenums">
+bottle.run(server='paste')
+</pre>
+
+Bottle 支持很多服务器, 下面列举的并不是所有的: 
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr><th>名称</th><th>主页</th><th>介绍</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>cgi</td><td>&nbsp;</td><td>以CGI脚本运行</td></tr>
+    <tr><td>flup</td><td>http://trac.saddi.com/flup</td><td>以 FastCGI 进程运行</td></tr>
+    <tr><td>gae</td><td>http://code.google.com/appengine/docs/python/overview.html</td><td>Google App Engine 部属</td></tr>
+    <tr><td>wsgiref</td><td>http://docs.python.org/library/wsgiref.html</td><td>默认为单线程的服务器</td></tr>
+    <tr><td>cherrypy</td><td>http://www.cherrypy.org/</td><td>多线程服务器</td></tr>
+    <tr><td>paste</td><td>http://pythonpaste.org/</td><td>多线程服务器</td></tr>
+    <tr><td>rocket</td><td>http://pypi.python.org/pypi/rocket</td><td>多线程服务器</td></tr>
+    <tr><td>gunicorn</td><td>http://pypi.python.org/pypi/gunicorn</td><td>部分用 C 编写</td></tr>
+    <tr><td>fapws3</td><td>http://www.fapws.org/</td><td>Asynchronous, 基于C 开发</td></tr>
+    <tr><td>tornado</td><td>http://www.tornadoweb.org/</td><td>Asynchronous, 服务了部分 FaceBook 的服务</td></tr>
+    <tr><td>twisted</td><td>http://twistedmatrix.com/</td><td>Asynchronous</td></tr>
+    <tr><td>diesel</td><td>http://dieselweb.org/</td><td>Asynchronous, 基于 Greenlet</td></tr>
+    <tr><td>meinheld</td><td>http://pypi.python.org/pypi/meinheld</td><td>Asynchronous, 部分基于 C 开发</td></tr>
+    <tr><td>bjoern</td><td>http://pypi.python.org/pypi/bjoern</td><td>Asynchronous, 非常快, 基于C开发</td></tr>
+    <tr><td>auto</td><td>&nbsp;</td><td>自动选择一个可用的 服务器</td></tr>
+  </tbody>
+</table>
+
+完整的服务器名称可使用 server_names 变量获得, 如果 Bottle 还没有提供你最喜欢的服务器, 那你可以手工的使用你的服务器启动它: 
+
+<pre class="prettyprint linenums">
+from paste import httpserver
+
+httpserver.serve(bottle.default_app(), host='0.0.0.0', port = 80)
+</pre>
+
+##多服务器进程
+
+一个 Python 进程只能使用到一个 CPU, 即时服务器硬件有多个CPU, 你可以在不同的端口中启动多个应用, 每一个应用使用一个 CPU, 然后使用分流服务器对访问进行分流, 比如 Apache mod_wsgi 或者 Nginx 等都可以作为前端分流服务器. 
