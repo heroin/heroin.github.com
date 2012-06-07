@@ -466,62 +466,58 @@ view() decorator 允许你返回一组需要传送给模板的数据字典即可
 
 模板被编译之后会缓存至内存中, 你可以使用 bottle.TEMPLATES.clear() 去手工清除它们. 
 
+##插件(Plugins)
+
+这是 Bottle 0.9 版本才有的新功能, 插件可以提供 Bottle 核心同有提供的功能集, 在"可用的 Bottle 插件列表": [http://bottlepy.org/docs/dev/plugins/index.html](http://bottlepy.org/docs/dev/plugins/index.html) 中你可以找到现在可用的插件, 你还可以开发自己的 Bottle 插件, 比如 sqlite 插件, 可以让你可以使用 db 来访问一个到SQLite 数据的链接:
+
+<pre class="prettyprint linenums">
+from bottle import route, install, template
+from bottle_sqlite import SQLitePlugin
+
+install(SQLitePlugin(dbfile='/tmp/test.db'))
+</pre>
+
+<pre class="prettyprint linenums">
+@route('/show/:post_id')
+def show(db, post_id):
+    c = db.execute('SELECT title, content FROM posts WHERE id = ?', (int(post_id)))
+    row = c.fetchone() 
+    return template('show_post', title=row['title'], text=row['content'])
+
+@route('/contact')
+def contact_page():
+    '''该回调函数不需要任何数据库连接, 因为没有 db 关键字, 所以 SQLite插件将完全忽略该回调函数'''
+    return template('contact')
+</pre>
+
+##在整个应用中安装插件
+
+插件可以被安装到整个应用中, 或者仅仅只针对某几个路由安装, 绝大多数插件都被安装到整个应用中, 以为所有路由服务. 要安装一个插件, 只需要将插件的名称作为第一个参数传递给 install() 函数即可: 
+
+<pre class="prettyprint linenums">
+from bottle_sqlite import SQLitePlugin
+
+install(SQLitePlugin(dbfile='/tmp/test.db'))
+</pre>
+
+##卸载已安装的插件
+
+你可以使用名称, 类或者对象来卸载一个已经安装的插件
+
+<pre class="prettyprint linenums">
+sqlite_plugin = SQLitePlugin(dbfile='/tmp/test.db')
+install(sqlite_plugin)
+uninstall(sqlite_plugin) #卸载特定的插件
+uninstall(SQLitePlugin) #卸载该类的所的实例
+uninstall('sqlite') # 卸载所有具有该名称的插件
+uninstall(True) # 一次性卸载所有已安装的插件
+</pre>
+
+插件可以在任何时间安装与卸载, 甚至是处理某个请求的回调函数中, 每一次已经安装的插件树更新时,  路由缓存都会跟着更新. 
+
 <pre class="prettyprint linenums">
 </pre>
 
 
 <pre class="prettyprint linenums">
 </pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
-
-<pre class="prettyprint linenums">
-</pre>
-
