@@ -14,7 +14,7 @@ Bottle 是一个非常小巧但高效的微型 Python Web 框架, 它被设计�
 - 工具集(Utilites): 快速的读取 form 数据, 上传文件, 访问 cookies, headers 或者其它 HTTP 相关的 metadata
 - 服务器(Server): 内置HTTP开发服务器, 并且支持 paste, fapws3, bjoern, Google App Engine, Cherrypy 或者其它任何 WSGI HTTP 服务器
 
-##安装 Bottle
+#安装 Bottle
 
 正如上面所说的,  Bottle 被设计为仅仅只有一个文件, 我们甚至可以不安装它, 直接将 bottle.py 文件下载并复制到我们的应用中就可以使用了, 这是一个好办法, 但是如果还是想将其安装, 那么我们可以像安装其它的 Python 模块一样: 
 
@@ -28,7 +28,7 @@ Bottle 是一个非常小巧但高效的微型 Python Web 框架, 它被设计�
 
 我们可以将下面的创建 Bottle 实例的示例代码复制到 app.py 文件中, 运行该文件即可. 
 
-###示例: Bottle 的 "Hello World" 程序
+#示例: Bottle 的 "Hello World" 程序
 
 下面的代码我们创建了一个十分简单但是完整的 Bottle 应用程序(在Python Consle)中
 
@@ -59,15 +59,17 @@ Bottle 是一个非常小巧但高效的微型 Python Web 框架, 它被设计�
 from bottle import Bottle, run
 
 app = Bottle()
+
 @app.route('/hello')
 def hello():
     return "Hello World!"
+
 run(app, host='localhost', port=8080)
 </pre>
 
 Bottle 的这种 URL 地址映射方法与我一直使用的 Flask 的地址映射方法很相似, 到现在为止, 我似乎只看到它们只是语法上面有些话不同. 
 
-##路由器(Request Routing)
+#路由器(Request Routing)
 
 Bottle 应用会有一个 URL 路由器, 它将 URL 请求地址绑定到回调函数上, 每请求一些 URL, 其对应的 回调函数就会运行一些, 而回调函数返回值将被发送到浏览器, 你可以在你的应用中通过 route() 函数添加不限数目的路由器. 
 
@@ -141,7 +143,7 @@ def login():
 
 特殊的 HEAD 方法, 经常被用来处理一些仅仅只需要返回请求元信息而不需要返回整个请求结果的事务, 这些HEAD方法十分有用, 可以让我们仅仅只获得我们需要的数据, 而不必要返回整个文档, Bottle 可以帮助我们很简单的实现这些功能, 它会将这些请求映射到与URL绑定的回调函数中, 然后自动截取请求需要的数据, 这样一来, 你不再需要定义任何特殊的 HEAD 路由了. 
 
-##静态文件路由(Routing Static Files)
+#静态文件路由(Routing Static Files)
 
 对于静态文件,  Bottle 内置的服务器并不会自动的进行处理, 这需要你自己定义一个路由, 告诉服务器在哪些文件是需要服务的, 并且在哪里可以找到它们, 我们可以写如下面这样的一个路由器:
 
@@ -161,7 +163,7 @@ def server_static(path):
     return static_file(path, root='/path/to/your/static/files')
 </pre>
 
-##错误页面(Error Pages)
+#错误页面(Error Pages)
 
 如果任何请求的URL没有的到匹配的回调函数, 那么 Bottle 都会返回错误页面, 你可以使用 error() decorator 来抓取 HTTP 状态, 并设置自己的相关回调函数, 比如下面我们的处理404错误的函数: 
 
@@ -173,7 +175,7 @@ def error404(error):
 
 这个时候, 404 文件未找到错误将被上面的自定义404错误处理方法代替, 传送给错误处理函数的唯一的一个参数是一个 HTTPError 实例, 它非常将普通的 request, 所以, 你也可以有 request 中读取到, 也可以写入 response 中, 并且返回任何 HTTPError 支持的数据类型. 
 
-##生成内容(Generating Content)
+#生成内容(Generating Content)
 
 在纯粹的 WSGI中, 你的应用能返回的数据类型是十分有限的, 你必须返回可迭代的字符串, 你能返回字符串是因为字符串是可以迭代的, 但是这导致服务器将你的内容按一字符一字符的传送, 这个时候, Unicode 字符将不允许被返回了, 这是肯定不行的. 
 
@@ -433,7 +435,7 @@ def show_ip():
     return 'Your IP is : {}'.format(ip)
 </pre>
 
-##模板(Templates)
+#模板(Templates)
 
 Bottle 内置了一个快速且强大的模板引擎, 叫作: \*SimpleTemplate Engine\* , 你可以使用 template() 函数 或者 view() decorator 来编译一个模板, 你所要作的仅仅只是提供该模板, 以及要传送给模板的数据, 下面是一个模板的简单示例: 
 
@@ -466,7 +468,7 @@ view() decorator 允许你返回一组需要传送给模板的数据字典即可
 
 模板被编译之后会缓存至内存中, 你可以使用 bottle.TEMPLATES.clear() 去手工清除它们. 
 
-##插件(Plugins)
+#插件(Plugins)
 
 这是 Bottle 0.9 版本才有的新功能, 插件可以提供 Bottle 核心同有提供的功能集, 在"可用的 Bottle 插件列表": [http://bottlepy.org/docs/dev/plugins/index.html](http://bottlepy.org/docs/dev/plugins/index.html) 中你可以找到现在可用的插件, 你还可以开发自己的 Bottle 插件, 比如 sqlite 插件, 可以让你可以使用 db 来访问一个到SQLite 数据的链接:
 
