@@ -45,9 +45,9 @@ redhat
 - svnserve.conf
 
 <table class="table table-bordered table-striped">
-  <tr><td>authz/td><td>目录访问权限配置</td></tr>
+  <tr><td>authz</td><td>目录访问权限配置</td></tr>
   <tr><td>passwd</td><td>帐号配置</td></tr>
-  <tr><td>svnserve.conf></td><td>基础配置, 指向用那些配置文件等</td></tr>
+  <tr><td>svnserve.conf</td><td>基础配置, 指向用那些配置文件等</td></tr>
 </table>
 
 ###修改passwd
