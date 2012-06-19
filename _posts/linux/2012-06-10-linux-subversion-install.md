@@ -64,8 +64,7 @@ authz下主要是3种节点
 - aliases 配置别名, 这个不配置留空就行
 - groups 配置组, 也可以不用配置
 
-<pre><code>
-[aliases]
+<pre><code>[aliases]
 
 [groups]
 system = admin
@@ -74,8 +73,7 @@ system = admin
 @system = rw
 
 [repos:/]
-admin = rw
-</code></pre>
+admin = rw</code></pre>
 
 其中直接写的是代表配置的是帐号的权限, 带`@`代表的是配置组的权限
 
