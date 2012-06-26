@@ -2,7 +2,7 @@
 layout: post
 title: linux 安装 svn 服务
 category: linux
-tags: [linux, svn, subversion]
+tags: [linux, svn, subversion, server]
 keywords: linux,svn,svn服务,subversion
 description: linux下安装subversion
 ---
