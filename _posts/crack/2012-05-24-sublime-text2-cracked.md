@@ -28,3 +28,7 @@ tags: [sublime text2, crack]
     —–END LICENSE—–
 
 保存退出即可, 将来使用直接打开`sublime_text_carcked.exe`就行.
+
+正式版的版本, 请不要用sublime text本身修改sublime text 否则会把执行文件直接弄损坏
+
+请使用任意一个带16进制编辑的工具修改, 注册方式一样
