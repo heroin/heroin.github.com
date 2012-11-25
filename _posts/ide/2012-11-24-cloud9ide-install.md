@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 安装cloud9 IDE
-category: javascript nodejs
+category: ide
 tags: [javascript, nodejs, cloud9 ide, nginx]
 keywords: javascript,linux,nginx,turnkey,nodejs,cloud9
 description: Linux安装cloud9 IDE
@@ -58,3 +58,30 @@ description: Linux安装cloud9 IDE
 
 将`localhost`替换成你的ip即可
 
+###配置nginx
+
+我的nginx配置文件如下
+
+    upstream cloud9 {
+        server 127.0.0.1:3131;
+        server 192.168.12.108:3131;
+    }
+
+    server {
+        listen                      80;
+        server_name                 cloud9.open-ns.org;
+
+        charset                     utf-8;
+        location / {
+            proxy_pass              http://cloud9;
+            proxy_set_header        Host             $host;
+            proxy_set_header        X-Real-IP        $remote_addr;
+            proxy_set_header        X-Forwarded-For  $proxy_add_x_forwarded_for;
+        }
+    }
+
+配置完毕后通过域名访问
+
+最后效果如下
+
+![](/assets/blog/make-clou9ide/cloud9.png)
