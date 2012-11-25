@@ -2,7 +2,9 @@
 layout: post
 title: linux编译nodejs
 category: javascript
-tags: [javascript, nodejs, cloud9 ide, nginx]
+tags: [javascript, nodejs, turnkey]
+keywords: linux,javascript,turnkey,nodejs
+description: linux编译nodejs
 ---
 
 ##获取nodejs
