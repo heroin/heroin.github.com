@@ -17,7 +17,7 @@ pcre下载地址
 
 [ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/](ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/)
 
-    ./configure –prefix=/usr/local/pcre
+    ./configure –-prefix=/usr/local/pcre
     make 
     make install
 
@@ -29,7 +29,7 @@ pcre下载地址
 
 ##配置环境变量
 
-    NGX_HOME=/usr/local/nodejs
+    NGX_HOME=/usr/local/nginx
     PATH=$PATH:$NGX_HOME/sbin
     export NGX_HOME PATH
 
