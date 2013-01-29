@@ -56,3 +56,7 @@ description: 通过httptunnel穿透防火墙通信
 
     ssh -p 8888 username@127.0.0.1
 
+###结束
+
+通过httptunnel的方式可以穿透防火墙, 不仅仅限于ssh端口, 同样适用于其他的协议
+
