@@ -36,3 +36,23 @@ description: 通过httptunnel穿透防火墙通信
   <tr><td>htc</td><td>将目标httptunnel隐射的端口转换到本地端口上</td></tr>
 </table>
 
+###hts使用方式
+
+在服务器上直接执行
+
+    hts --forward-port ip:22 8080
+
+这将把ssh的`22`端口以`http协议`的方式映射到服务器的`8080`端口上
+
+###htc使用方式
+
+在客户端上直接执行(如果是windows系统的话可以拿到源码通过cygwin进行编译)
+
+    htc -F 8888 ip:8080
+
+这将把目标ip的`httptunnel`端口在本地上的`8888`进行绑定
+
+然后通过ssh客户端连接
+
+    ssh -p 8888 username@127.0.0.1
+
