@@ -32,6 +32,7 @@ description: 通过httptunnel穿透防火墙通信
 主要是用到`htc`和`hts`2个文件
 
 <table class="table table-bordered table-striped">
-  <tr><td>hts</td><td>ssl.gstatic.com</td></tr>
-  <tr><td>htc</td><td>ssl.gstatic.com</td></tr>
+  <tr><td>hts</td><td>将本地任意端口以http的协议映射到任意端口上</td></tr>
+  <tr><td>htc</td><td>将目标httptunnel隐射的端口转换到本地端口上</td></tr>
 </table>
+
