@@ -2,8 +2,8 @@
 layout: post
 title: maven 上传 插件
 category: java
-tags: [java, mavan, upload, deploy, plugin]
-keywords: java, mavan, upload, deploy-maven-plugin
+tags: [java, maven, upload, deploy, plugin]
+keywords: java, maven, upload, deploy-maven-plugin
 description: maven上传插件
 ---
 
