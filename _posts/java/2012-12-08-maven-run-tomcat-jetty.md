@@ -28,8 +28,15 @@ description: 通过 maven 启动 tomcat, jetty
 <pre class="prettyprint linenums">
 &lt;plugin&gt;
     &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
-
-<pre>
+    &lt;artifactId&gt;tomcat6-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.0&lt;/version&gt;
+    &lt;configuration&gt;
+        &lt;path&gt;/&lt;/path&gt;
+        &lt;port&gt;8080&lt;/port&gt;
+        &lt;uriEncoding&gt;UTF-8&lt;/uriEncoding&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;
+</pre>
 
 ### Tomcat 7
 
