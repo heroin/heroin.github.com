@@ -7,6 +7,22 @@ keywords: java, mavan, upload, deploy-maven-plugin
 description: maven上传插件
 ---
 
+由于最近开发一个项目是运行在linux上的, 需要频繁的上传编译后的文件到服务器上
+
+于是自己写了一个基于maven的上传插件
+
+[项目地址](https://github.com/heroin/deploy-maven-plugin)
+
+该插件是先编译项目然后将编译的结果上传至指定服务器, 指定目录
+
+目前是只支持单ip, 并且密码是明文方式配置
+
+未来考虑可以上传多个文件, 或者通过密钥的方式验证
+
+目前这个项目还没传到maven中央服务器上, 
+
+要用的可以先把源码下下来安装到自己本地仓库, 或者提交到内部私服
+
 ## 配置方式
 
 <pre class="prettyprint linenums">
@@ -40,3 +56,4 @@ description: maven上传插件
 </table>
 
 其中`port`和`remotePath`是有默认值的, 可以不填写
+
