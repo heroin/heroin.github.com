@@ -9,7 +9,7 @@ description: 通过 maven 启动 tomcat, jetty
 
 ## 配置maven
 
-直接在pom里面添加一个`plugin`节点就行
+直接在`pom`里面添加一个`plugin`节点就行
 
 <pre class="prettyprint linenums">
 &lt;build&gt;
