@@ -66,6 +66,10 @@ description: 通过光盘制作debian源
     -o APT::FTPArchive::Release::Description="Description: Debian 6.0.7 Released 23 February 2013" \
     > Release
 
+生成`Release.gpg`
+
+    gpg -abs -o Release.gpg Release
+
 等待扫描完毕后, 将`/var/sources/`发布到web目录上
 
 我是拿`nginx`直接指向过去的
