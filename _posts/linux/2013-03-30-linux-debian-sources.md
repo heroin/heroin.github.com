@@ -46,6 +46,26 @@ description: 通过光盘制作debian源
     dpkg-scanpackages pool/main | gzip > dists/squeeze/main/binary-amd64/Packages.gz
     dpkg-scanpackages pool/contrib | gzip > dists/squeeze/contrib/binary-amd64/Packages.gz
 
+将`Packages.gz`备份一份 然后执行
+
+    gunzip Packages.gz
+
+最后再还原成`Packages.gz`
+
+生成`Release`文件
+
+    apt-ftparchive release . \
+    -o APT::FTPArchive::Release::Origin="Debian" \
+    -o APT::FTPArchive::Release::Label="Debian" \
+    -o APT::FTPArchive::Release::Suite="stable" \
+    -o APT::FTPArchive::Release::Version="6.0.7" \
+    -o APT::FTPArchive::Release::Codename="squeeze" \
+    -o APT::FTPArchive::Release::Date="Sat, 23 Feb 2013 10:54:11 UTC" \
+    -o APT::FTPArchive::Release::Architectures="amd64" \
+    -o APT::FTPArchive::Release::Components="main contrib" \
+    -o APT::FTPArchive::Release::Description="Description: Debian 6.0.7 Released 23 February 2013" \
+    > Release
+
 等待扫描完毕后, 将`/var/sources/`发布到web目录上
 
 我是拿`nginx`直接指向过去的
