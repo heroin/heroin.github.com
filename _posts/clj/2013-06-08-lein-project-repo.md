@@ -1,10 +1,10 @@
 ---
 layout: post
 title: lein 设置 repo 地址
-category: emacs
-tags: [emacs, ide, erlang, lisp, slime, golang]
+category: clojure
 codes: [clj]
-keywords: emacs, ide, erlang, lisp, slime, golang
+tags: [clojure, lein]
+keywords: clojure, lein, repositories
 description: lein 设置 repo 地址
 ---
 
