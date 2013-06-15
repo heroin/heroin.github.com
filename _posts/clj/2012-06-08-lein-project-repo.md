@@ -5,7 +5,7 @@ category: emacs
 tags: [emacs, ide, erlang, lisp, slime, golang]
 codes: [clj]
 keywords: emacs, ide, erlang, lisp, slime, golang
-description: emacs 配置开发环境
+description: lein 设置 repo 地址
 ---
 
 ### 全局设置
