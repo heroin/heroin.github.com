@@ -38,6 +38,29 @@ description: linux下repl乱码解决
     # ReadHat
     # yum install readline-devel
 
+#### 编译 readline
+
+如果采用了安装二进制包, 请无视
+
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2.tar.gz
+    tar zxvf readline-6.2.tar.gz
+    cd readline-6.2
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-001
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-001.sig
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-002
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-002.sig
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-003
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-003.sig
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-004
+    wget ftp://ftp.gnu.org/gnu/readline/readline-6.2-patches/readline62-004.sig
+    patch -p0 < readline62-001
+    patch -p0 < readline62-002
+    patch -p0 < readline62-003
+    patch -p0 < readline62-004
+    ./configure
+    make
+    make install
+
 安装了二进制包后直接安装 rlwrap
 
     wget http://utopia.knoware.nl/~hlub/uck/rlwrap/rlwrap-0.37.tar.gz
