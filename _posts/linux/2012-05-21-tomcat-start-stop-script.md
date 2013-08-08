@@ -62,7 +62,7 @@ case $1 in
       echo $PID
     fi
   ;;
-  \*)
+  \\\*)
     echo "default args is start!"
     tomcat_start
   ;;
