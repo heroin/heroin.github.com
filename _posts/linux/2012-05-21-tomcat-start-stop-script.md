@@ -8,5 +8,12 @@ description: linux下tomcat启动关闭脚本
 ---
 
 <pre class="prettyprint linenums">
-code
+#!/bin/bash
+
+PID=`ps -ef | grep tomcat | grep java | grep ClassLoaderLogManager | grep -v grep | awk '{print $2}'`
+
+tomcat_log() {
+  tail -f $CATALINA_HOME/logs/catalina.out
+}
+
 </pre>
