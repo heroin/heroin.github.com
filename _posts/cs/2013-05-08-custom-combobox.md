@@ -7,33 +7,33 @@ keywords: C#, combobox
 description: C#自定义设置边框下拉框
 ---
 
+<pre class="prettyprint linenums">
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
+using System.Drawing;
 
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-    using System.Windows.Forms;
-    using System.Drawing;
-    
-    namespace Custom
+namespace Custom
+{
+    public class CustomComBoBox : ComboBox
     {
-        public class CustomComBoBox : ComboBox
-        {
-            private Color borderColor;
-    
-            /// &lt;summary&gt;
-            /// 边框颜色
-            /// &lt;/summary&gt;
-            public Color BorderColor
-            {
-                get { return borderColor; }
-                set { borderColor = value; }
-            }
-    
-            protected override void WndProc(ref Message m)
-            {
-                base.WndProc(ref m);
-                ControlPaint.DrawBorder(this.CreateGraphics(), this.ClientRectangle, this.BorderColor, ButtonBorderStyle.Solid);
-            } 
-        }
-    }
+        private Color borderColor;
 
+        /// &lt;summary&gt;
+        /// 边框颜色
+        /// &lt;/summary&gt;
+        public Color BorderColor
+        {
+            get { return borderColor; }
+            set { borderColor = value; }
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            ControlPaint.DrawBorder(this.CreateGraphics(), this.ClientRectangle, this.BorderColor, ButtonBorderStyle.Solid);
+        } 
+    }
+}
+</pre>
