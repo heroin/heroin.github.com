@@ -7,7 +7,7 @@ keywords: linux,tomcat,start,stop,script,shell
 description: linux下tomcat启动关闭脚本
 ---
 
-
+<pre class="prettyprint linenums">
     #!/bin/bash
 
     PID=`ps -ef | grep tomcat | grep java | grep ClassLoaderLogManager | grep -v grep | awk '{print $2}'`
@@ -67,4 +67,4 @@ description: linux下tomcat启动关闭脚本
         tomcat_start
       ;;
     esac
-
+</pre>
