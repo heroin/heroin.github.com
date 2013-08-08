@@ -10,39 +10,39 @@ description: linux下tomcat启动关闭脚本
 <pre class="prettyprint linenums">
 #!/bin/bash
 
-PID=`ps -ef | grep tomcat | grep java | grep ClassLoaderLogManager | grep -v grep | awk '{print %242}'`
+PID=`ps -ef | grep tomcat | grep java | grep ClassLoaderLogManager | grep -v grep | awk '{print $2}'`
 
 tomcat_log() {
-  tail -f %24CATALINA_HOME/logs/catalina.out
+  tail -f $CATALINA_HOME/logs/catalina.out
 }
 
 tomcat_start() {
-  if [ -z %24PID ]; then
+  if [ -z $PID ]; then
     echo "[start] start tomcat!"
-    %24CATALINA_HOME/bin/startup.sh
+    $CATALINA_HOME/bin/startup.sh
   else
     echo "[start] tomcat is run!"
   fi
 }
 
 tomcat_stop() {
-  if [ -n %24PID ]; then
-    %24CATALINA_HOME/bin/shutdown.sh
+  if [ -n $PID ]; then
+    $CATALINA_HOME/bin/shutdown.sh
   else
     echo "[stop] tomcat is not run!"
   fi
 }
 
 tomcat_kill() {
-  if [ -z %24PID ]; then
+  if [ -z $PID ]; then
     echo "[kill] tomcat is not run!"
   else
     echo "[kill] kill tomcat!"
-    kill -9 %24PID
+    kill -9 $PID
   fi
 }
 
-case %241 in
+case $1 in
   log)
     tomcat_log
   ;;
@@ -56,10 +56,10 @@ case %241 in
     tomcat_kill
   ;;
   pid)
-    if [ -z %24PID ]; then
+    if [ -z $PID ]; then
       echo "[pid] tomcat is not run!"
     else
-      echo %24PID
+      echo $PID
     fi
   ;;
   *)
