@@ -7,7 +7,6 @@ keywords: linux,tomcat,start,stop,script,shell
 description: linux下tomcat启动关闭脚本
 ---
 
-<pre class="prettyprint linenums">
 
     #!/bin/bash
 
@@ -69,4 +68,5 @@ description: linux下tomcat启动关闭脚本
       ;;
     esac
 
-</pre>
+
+111
