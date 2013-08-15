@@ -52,6 +52,7 @@ description: 提高google访问速度和稳定性
   <tr><td>203.208.46.161</td><td>code.google.com</td></tr>
   <tr><td>203.208.46.161</td><td>docs.google.com</td></tr>
   <tr><td>203.208.46.161</td><td>apis.google.com</td></tr>
+  <tr><td>203.208.46.161</td><td>appengine.google.com</td></tr>
   <tr><td>203.208.46.161</td><td>sites.google.com</td></tr>
   <tr><td>203.208.46.161</td><td>groups.google.com</td></tr>
   <tr><td>203.208.46.161</td><td>www.googleapis.com</td></tr>
